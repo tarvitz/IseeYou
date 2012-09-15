@@ -1,0 +1,24 @@
+/*spacers */
+.top.spacer{
+    margin-bottom: 60px;
+}
+.spacer{
+    margin-bottom: 15px;
+}
+/* news */
+.post{
+    margin-bottom: 10px;
+}
+.textarea.input{
+    width: 675px;
+}
+/* endof news */
+
+/* forms */
+.filter-form{
+    display: inline-block;
+}
+
+.form-errors{
+    color: red;
+}
