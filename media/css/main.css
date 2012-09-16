@@ -22,3 +22,6 @@
 .form-errors{
     color: red;
 }
+.spoiler{
+    display: none;
+}
