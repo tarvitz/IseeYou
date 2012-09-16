@@ -1,8 +1,6 @@
 # coding: utf-8
 import re
-from apps.core.models import XHRSession, WebApp
-from apps.core.helpers import generate_safe_value, get_object_or_None,\
-    write_xhr_session
+from apps.core.helpers import generate_safe_value, get_object_or_None
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.conf import settings

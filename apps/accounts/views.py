@@ -1,6 +1,7 @@
 # Create your views here.
 # -*- coding: utf-8 -*-
-from apps.core.helpers import render_to
+from apps.core.helpers import render_to, ajax_response
+from apps.core.decorators import login_required_json
 from apps.accounts.forms import LoginForm
 
 from django.contrib import auth
@@ -21,3 +22,17 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return {}
+
+@render_to('accounts/profile.html')
+def profile(request):
+    return {}
+
+@login_required_json
+@ajax_response
+def generate_new_api_key(request):
+    if request.method == 'POST':
+        request.user.api_key.key = request.user.api_key.generate_key()
+        request.user.api_key.save()
+        key = request.user.api_key.key
+        return {'success': True, 'key': key}
+    return {'success': False}

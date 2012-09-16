@@ -18,5 +18,6 @@ urlpatterns = patterns('',
     url(r'^', include('apps.core.urls', namespace='core')),
     url(r'^', include('apps.accounts.urls', namespace='accounts')),
     url(r'^banlist/', include('apps.banlist.urls', namespace='banlist')),
+    url(r'', include('urls_api')),
 
 )

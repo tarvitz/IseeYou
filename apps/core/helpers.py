@@ -283,3 +283,11 @@ def render_to(template, content_type='text/html'):
                     dt, context_instance=RequestContext(request))
         return wrapper
     return decorator
+
+def ajax_response(func):
+    def wrapper(request, *args, **kwargs):
+        dt = func(request, *args, **kwargs)
+        response = make_http_response(content_type='text/javascript')
+        response.write(json.dumps(dt, default=model_json_encoder))
+        return response
+    return wrapper

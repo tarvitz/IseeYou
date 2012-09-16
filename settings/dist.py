@@ -142,6 +142,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'grappelli',
     'django.contrib.admin',
+    'tastypie',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -188,3 +189,6 @@ TINY_MCE_BUTTONS=[
     'newdocument,|,cut,copy,paste,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,code,preview,|,forecolor,backcolor|,ltr,rtl,|,hr,removeformat,visualaid,|,visualchars,nonbreaking,blockquote,pagebreak,',
 #    'tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen',
 ]
+
+THROTTLE_AT=300
+ENABLE_THROTTLING=True
