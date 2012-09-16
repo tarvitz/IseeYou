@@ -1,0 +1,10 @@
+{% extends base %}{% load i18n %}
+{% block content %}
+<div class='control-group'>
+    <form class='add ban' id='add-ban-form' method='POST' action='{% url banlist:add %}'>
+        {% csrf_token %}
+        {% include "forms/bootstrap.html" %}
+        <input type='submit' class='btn btn-success' value='{% trans "Add" %}' />
+    </form>
+</div>
+{% endblock %}
