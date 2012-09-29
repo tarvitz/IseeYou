@@ -1,0 +1,41 @@
+{% extends base %}
+{% load i18n %}
+{% block title %}{% trans "FAQ" %}{% endblock %}
+{% block css %}
+    {{ block.super }}
+    <link rel='stylesheet' href='/media/css/faq.css' type='text/css'>
+{% endblock %}
+
+{% block content %}
+<h1>{% trans "FAQ" %}</h1>
+<ul class='faq questions'>
+    <li><a href='#1'>Can I register?</a></li>
+    <li><a href='#2'>How can I recive invite?</a></li>
+    <li><a href='#3'>Can i offer the help with code, interface, design, money, another stuff?</a></li>
+</ul>
+
+<h1>{% trans "Answers" %}</h1>
+<ul class='faq answers'>
+    <li>
+        <a name='#1'>Can I register?</a>
+        {% blocktrans %}
+            No, you can not register, but you could recive invite and use this resouce as normal user.
+        {% endblocktrans %}
+    </li>
+    <li>
+        <a name='#2'>How can I recieve invite?</a>
+            {% trans "Please visit following links" %}: <br>
+            <ul class='links'>
+                <li><a href='#'>Bla-bla (russian)</a></li>
+                <li><a href='#'>International</a></li>
+            </ul>
+    </li>
+    <li>
+        <a name='#3'>Can i offer the help?</a>
+        {% blocktrans %}
+            Sure, why not? please then contact me, mail to:
+            tarvitz [at] blacklibrary dot ru with subject: providing help or something similar to.
+        {% endblocktrans %}
+    </li>
+</ul>
+{% endblock %}

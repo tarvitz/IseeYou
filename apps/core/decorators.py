@@ -4,6 +4,7 @@ from apps.core.helpers import generate_safe_value, get_object_or_None
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.conf import settings
+from django.shortcuts import redirect
 
 def void_view_old(func):
     def wrapper(*args, **kwargs):
@@ -17,6 +18,16 @@ def lock_with_demo(func):
                 return HttpResponseRedirect(reverse('url_demo_restrictions'))
         return func(request, **kwargs)
     return wrapper
+
+def lock(param):
+    def decorator(func):
+        def wrapper(request, *args, **kwargs):
+            if hasattr(settings, param):
+                if getattr(settings, param):
+                    return func(request, *args, **kwargs)
+            return redirect('core:blockage')
+        return wrapper
+    return decorator
 
 def check_allowed(*args):
     def decorator(func):

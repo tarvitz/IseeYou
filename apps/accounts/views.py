@@ -1,10 +1,12 @@
 # Create your views here.
 # -*- coding: utf-8 -*-
 from apps.core.helpers import render_to, ajax_response
+from apps.core.decorators import lock
 from apps.core.decorators import login_required_json
-from apps.accounts.forms import LoginForm
+from apps.accounts.forms import LoginForm, AccountRegisterForm
 
 from django.contrib import auth
+
 
 @render_to('accounts/login.html')
 def login(request):
@@ -18,14 +20,17 @@ def login(request):
         'form': form
     }
 
+
 @render_to('index.html')
 def logout(request):
     auth.logout(request)
     return {}
 
+
 @render_to('accounts/profile.html')
 def profile(request):
     return {}
+
 
 @login_required_json
 @ajax_response
@@ -36,3 +41,17 @@ def generate_new_api_key(request):
         key = request.user.api_key.key
         return {'success': True, 'key': key}
     return {'success': False}
+
+@lock("REGISTER_ALLOWED")
+@render_to('accounts/register.html')
+def register(request):
+    form = AccountRegisterForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.set_password(form.cleaned_data['password'])
+            user.save()
+            return {'redirect': 'core:index'}
+    return {
+        'form': form
+    }

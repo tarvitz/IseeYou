@@ -1,0 +1,11 @@
+.faq.answers a[name]{
+    color: #333;
+    text-decoration: none;
+    font-size: 16pt;
+    display: block;
+    line-height: 30px;
+    font-weight: bold;
+}
+.faq li{
+    list-style-type: square;
+}

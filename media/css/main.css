@@ -25,3 +25,7 @@
 .spoiler{
     display: none;
 }
+.btn.fixed-size{
+    width: 50px;
+    margin-bottom: 5px;
+}
