@@ -32,3 +32,16 @@
 .thmb{
     border: 1px solid black;
 }
+.icon-bitcoin, .icon-litecoin, .icon-yandexmoney{
+    width: 16px;
+    height: 16px;
+    background-image: url(/media/img/wallets.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+.icon-litecoin{
+    background-position: 0px -16px;
+}
+.icon-yandexmoney{
+    background-position: 0px -32px;
+}
