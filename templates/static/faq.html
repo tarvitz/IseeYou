@@ -9,32 +9,116 @@
 {% block content %}
 <h1>{% trans "FAQ" %}</h1>
 <ul class='faq questions'>
-    <li><a href='#1'>Can I register?</a></li>
-    <li><a href='#2'>How can I recive invite?</a></li>
-    <li><a href='#3'>Can i offer the help with code, interface, design, money, another stuff?</a></li>
+    <li><a href='#configuration'>{% trans "What is needed to make it work?" %}</a></li>
+    <li><a href='#register'>{% trans "Can I register?" %}</a></li>
+    <li><a href='#invite'>{% trans "How can I recive invite?" %}</a></li>
+    <li><a href='#how_it_works'>{% trans "How it works?" %}</a></li>
+    <li><a href='#contacts'>{% trans "Can i offer the help with code, interface, design, another stuff?" %}</a></li>
+    <li><a href='#donate'>{% trans "Can I donate?" %}</a></li>
+    <li><a href='#donation'>{% trans "If I donate where money would be spent to?" %}</a></li>
+    <li><a href='#server'>{% trans "I don't want to register b3ban.blacklibrary.ru, what I can do this way?" %}</a></li>
 </ul>
 
 <h1>{% trans "Answers" %}</h1>
 <ul class='faq answers'>
+    <li><a name='configuration'>{% trans "What is needed to make it work?" %}</a>
+        {% trans "Please, read follow " %}<a href='{% url core:configuration %}'>{% trans "link" %}</a> {% trans "to succeed." %}
+    </li>
     <li>
-        <a name='#1'>Can I register?</a>
+        <a name='register'>Can I register?</a>
         {% blocktrans %}
-            No, you can not register, but you could recive invite and use this resouce as normal user.
+            I am sorry but you can not register for now, but you could recive invite and use this resource as normal user.<br>
+            Please read information how to get invitation <a href='#invite'>below</a>.
         {% endblocktrans %}
     </li>
     <li>
-        <a name='#2'>How can I recieve invite?</a>
+        <a name='invite'>How can I recieve invite?</a>
             {% trans "Please visit following links" %}: <br>
             <ul class='links'>
                 <li><a href='#'>Bla-bla (russian)</a></li>
                 <li><a href='#'>International</a></li>
             </ul>
     </li>
-    <li>
-        <a name='#3'>Can i offer the help?</a>
+    <li><a name='how_it_works'>{% trans "How it works" %}</a>
         {% blocktrans %}
-            Sure, why not? please then contact me, mail to:
-            tarvitz [at] blacklibrary dot ru with subject: providing help or something similar to.
+        Server holds every ban data you add within your account.
+        {% endblocktrans %}<br>
+        <a rel='lightbox[pic]' href='/media/faq/ban.png' title='{% trans "ban sample" %}'>
+            <img src='/media/faq/ban_thmb.png' alt='{% trans "ban sample" %}' />
+        </a><br>
+        {% blocktrans %}
+        When you get access on battle log servers browser extension will cut every single server that matches with your ip bans.<br>
+        So you should know how to get server ip address you want to ban.<br>
+        It's pretty simple: (watch screenshots below)<br>
+        {% endblocktrans %}
+        <div class='images'>
+        <a rel='lightbox[pic]' href='/media/faq/battlelog_servers.png' title='{% trans "battle log server list" %}'>
+            <img src='/media/faq/battlelog_servers_thmb.png' alt='{% trans "servers" %}' />
+        </a>
+        <a rel='lightbox[pic]' href='/media/faq/battlelog_server_item.png' title='{% trans "Chosen server" %}'>
+            <img src='/media/faq/battlelog_server_item_thmb.png' alt='{% trans "Server" %}' />
+        </a>
+        <a rel='lightbox[pic]' href='/media/faq/add_ban_1.png' title='{% trans "Add ban step 1" %}'>
+            <img src='/media/faq/add_ban_1_thmb.png' alt='{% trans "Add ban step 1" %}' />
+        </a>
+        <a rel='lightbox[pic]' href='/media/faq/add_ban_2.png' title='{% trans "Add ban step 2" %}'>
+            <img src='/media/faq/add_ban_2_thmb.png' alt='{% trans "Add ban step 2" %}' />
+        </a>
+        <a rel='lightbox[pic]' href='/media/faq/add_ban_3.png' title='{% trans "Add ban step 3" %}'>
+            <img src='/media/faq/add_ban_3_thmb.png' alt='{% trans "Add ban step 3" %}' /></a>
+        </div>
+        <b>{% trans "Important to know" %}</b>.
+        {% blocktrans %}
+            Extension holds data with local storage, that gives fast speed communications and prevent storage server for overloading.<br>
+            So you should remember that every time you add ban for a server you should reload extension ban list like you can see below:<br>
+        {% endblocktrans %}
+        <a rel='lightbox[pic]' href='/media/faq/result_searching_1.png' title='{% trans "Search result step 1" %}'>
+            <img src='/media/faq/result_searching_1_thmb.png' alt='{% trans "Search result step 1" %}' />
+        </a>
+        <a rel='lightbox[pic]' href='/media/faq/result_searching_2.png' title='{% trans "Search result step 2" %}'>
+            <img src='/media/faq/result_searching_1_thmb.png' alt='{% trans "Search result step 1" %}' />
+        </a>
+        <a rel='lightbox[pic]' href='/media/faq/result_searching_3.png' title='{% trans "Search result step 3" %}'>
+            <img src='/media/faq/result_searching_1_thmb.png' alt='{% trans "Search result step 1" %}' />
+        </a>
+    </li>
+    <li>
+        <a name='contacts'>Can I offer the help?</a>
+        {% blocktrans %}
+            Sure, why not? please then contact me, mail to:<br>
+            tarvitz [at] blacklibrary dot ru with subject: providing help or something similar to.<br>
+        {% endblocktrans %}
+   </li>
+   <li><a name='donate'>{% trans "Can I donate? "%}</a>
+            {% blocktrans %}
+            Yes, why not? Donate support you can offer via:
+            {% endblocktrans %}
+            <ul class='donations'>
+                <li><i class='icon-bitcoin'></i> {% trans "bitcoin" %}: 1DpeiYyx3Nb4dEEvYyxgW3iHLNwmFcCXaf</li>
+                <li><i class='icon-litecoin'></i> {% trans "litecoin" %}: LPmyhyf5XSdirdTM9AjS5AJGxomZrS2Hy2</li>
+                <li><i class='icon-yandexmoney'></i> {% trans "YandexMoney" %}: 41001398387338</li>
+            </ul>
+    </li>
+    <li><a name='donation'>{% trans "If I donate where money would be spent to?" %}</a>
+        {% blocktrans %}
+            I think if it would be enough for first time this server would migrate for separate server platform to get more users, more people can use it for free :).<br>
+            The other plan is the improvement of present features, implement others. For example more user friendly ban operating within battlfield server browser or friends ban merging with yours (global bans and other stuff).<br>
+            You can offer or suggest feature or an idea to be implemented with or without donation. If it's great it would be in production some day :).<br>
+            So I mean the money would be a stimulation for further improvements.<br>
+            <div class='hide'>
+            Almost forgot if you want to support me, but you can not donate bitcoin, litecoin, yandex money you can offer help following people and organization (which products used to make this all possible):
+            <ul class='donations'>
+                <li><a href=''></a></li>
+            </ul>
+            </div>
+        {% endblocktrans %}
+    </li>
+    <li><a name="server">{% trans "I don't want to register b3ban.blacklibrary.ru, what I can do this way?" %}</a>
+        {% blocktrans %}
+        Actually you haven't to register <a href='http://b3ban.blacklibrary.ru'>b3ban.blacklibrary.ru</a> because this implements just storage of server bans and now it's pretty simple one.<br>
+        If you are developer you can make your own storage application with HTTP 1.1 GET interface you would use with extension as well as the <a href='http://b3ban.blacklibrary.ru'>b3ban.blacklibrary.ru</a> users.<br>
+        Anyway some other day I want to open-source server-side part and put it on <a href='https://github.com'>github</a>.<br>
+        Ask me about it in case of emergency :) or wait for this FAQ update when I'll give information about this all.
         {% endblocktrans %}
     </li>
 </ul>

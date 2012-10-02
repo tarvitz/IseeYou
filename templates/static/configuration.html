@@ -1,0 +1,92 @@
+{% extends base %}
+{% load i18n %}
+{% block title %}{% trans "FAQ" %}{% endblock %}
+{% block css %}
+    {{ block.super }}
+    <link rel='stylesheet' href='/media/css/faq.css' type='text/css'>
+{% endblock %}
+
+{% block content %}
+<h1>{% trans "Configuration page" %}</h1>
+<hr />
+
+<ul class='faq'>
+    <li><a href='#requirements'>{% trans "Requirements" %}</a></li>
+    <li><a href='#register'>{% trans "Register" %}</a>
+        <ul class='subtree'>
+            <li><a href='#invite'>{% trans "Recieving invite" %}</a></li>
+        </ul>
+    </li>
+    <li><a href='#configuration'>{% trans "Configuration" %}</a></li>
+</ul>
+
+<ul class='faq answers'>
+    <li><a name='requirements'>{% trans "Requirements" %}</a>
+        <ul class='requirements'>
+            <li>{% blocktrans %}
+            <a href='https://chrome.google.com/'>Chrome browser</a>
+            verion not lower than <b>22.0.1229.14</b>, please use last stable and secure one
+            {% endblocktrans %}
+            </li>
+            <li>{% blocktrans %}
+            Account on <a href='http://b3ban.blacklibrary.ru/'>b3ban.blacklibrary.ru</a>
+            {% endblocktrans %}
+            </li>
+        </ul>
+    </li>
+    <li><a name='register'>{% trans "Register" %}</a>
+        {% blocktrans %}
+            You can not register free now, because server in test mode and it was reserved for few amount of people, who would use it.<br>
+            It should not be a big deal or problem to recieve invite (please see information below)
+        {% endblocktrans %}
+    </li>
+    <li><a name='invite'>{% trans "Recieving invite" %}</a>
+        {% blocktrans %}
+            Give information here
+        {% endblocktrans %}
+    </li>
+    <li><a name='configuration'>{% trans "Configuration" %}</a>
+        <ul class='steps'>
+            <li><a href='{% url accounts:login %}' target="_blank">{% trans "Login" %}</a>
+                {% trans "with b3ban.blacklibrary.ru" %}
+            </li>
+            <li>
+                {% trans "Read account information data via your" %}
+                <a href='{% url accounts:profile %}' target='_blank'>{% trans "profile" %}</a><br>
+                {% trans "And copy api_key value into the clipboard" %}
+            </li>
+            <li>
+                {% trans "Click on options link via extension popup (see the picture below)" %}<br>
+
+                <a rel='lightbox[pic]' href='/media/configuration/popup_options.png'
+                    title="{% trans "Popup options" %}">
+                    <img class='thmb' src='/media/configuration/popup_options_thmb.png' alt='{% trans "Popup options" %}'></a>
+            </li>
+            <li>
+                {% trans "Set proper options, set your username and api key by copy-pasting from your profile page" %}<br>
+                {% trans "You should set b3ban.blacklibrary.ru as server" %}<br>
+
+                <a rel='lightbox[pic]' href='/media/configuration/profile_api_key.png'
+                    title='{% trans "Your api key" %}'>
+                    <img class='thmb' src='/media/configuration/profile_api_key_thmb.png' alt='{% trans "Api key" %}' />
+                </a>
+
+                <a rel='lightbox[pic]' href='/media/configuration/options.png'
+                    title='{% trans "Options" %}'>
+                    <img class='thmb' src='/media/configuration/options_thmb.png' alt='{% trans "Options window" %}' />
+                </a>
+                <br>
+
+                <div class='code'>
+                {% blocktrans %}
+                    <b>Click</b>
+                    <span class='btn btn-success btn-small'>Save</span> <b>and wait for response</b>
+                {% endblocktrans %}<br>
+                {% trans "That's all configuration before first use" %}.
+                </div>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+{% endblock %}

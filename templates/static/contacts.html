@@ -1,0 +1,14 @@
+{% extends base %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Contacts" %}</h1>
+{% blocktrans %}
+    You can contact with me via:
+{% endblocktrans %}
+<ul class='contacts'>
+    <li class='email'>{% trans "My email: tarvitz [at] blacklibrary [dot] ru, please do not spam me :)" %}.</li>
+    <li class='jabber'>{% blocktrans %}
+    My jabber ID: tarvitz [at] jabber [dot] ru, tarvitz [at] blacklibrary [dot] ru, <br>
+        the second one is a little bit broken but I'll fix it soon{% endblocktrans %}
+    </li>
+</ul>
+{% endblock %}

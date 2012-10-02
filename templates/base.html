@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>{% load i18n coretags%}
+<title>{% block title %}b3ban.blacklibrary.ru{% endblock %}</title>
 {% block css %}
 <link rel='stylesheet' href='/media/css/bootstrap.min.css' media='screen'>
 <link rel='stylesheet' href='/media/css/chosen.css' media='screen'>
+<link rel='stylesheet' href='/media/css/lightbox.css' media='screen'>
 <link rel='stylesheet' href='/media/css/main.css' media='screen'>
 {% endblock %}
 {% block js %}
 <script type='text/javascript' src='/media/js/jquery-1.7.2.min.js'></script>
 <script type='text/javascript' src='/media/js/bootstrap-2.0.min.js'></script>
+<script type='text/javascript' src='/media/js/supersized.3.2.7.min.js'></script>
+<script type='text/javascript' src='/media/js/lightbox.js'></script>
 <script type='text/javascript' src='/media/js/chosen.jquery.js'></script>
 <script type='text/javascript' src='/media/js/jquery.tmpl.min.js'></script>
 <script type='text/javascript' src='/media/js/jquery.confirm_dialogue.js'></script>
@@ -25,7 +29,7 @@
         <span class="icon-bar"></span>
       </a>
       <a class="brand" href="{% url core:index %}">ICu</a>
-      
+
       {% if user.is_authenticated %}
       <div class='btn-group pull-right'>
           <a class='btn btn-black dropdown-toggle' data-toggle='dropdown' href='#'>
@@ -58,7 +62,7 @@
                 </ul>
           </div>
       {% endif %} {# is auth #}
-     
+
      <div class="nav-collapse">
         <ul class="nav">
           {% comment %}
@@ -78,9 +82,11 @@
           <li class="active"><a href="#">News</a></li>
           {% endif %}
           {% endcomment %}
-
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class='{% check_location core:about as "active" %}'><a href="{% url core:about %}">{% trans "About" %}</a></li>
+          <li class='{% check_location core:faq as "active" %}'><a href='{% url core:faq %}'>{% trans "FAQ" %}</a></li>
+          <li class='{% check_location core:configuration as "active" %}'><a href='{% url core:configuration %}'>{% trans "Configuration" %}</a></li>
+          <li class='{% check_location core:contacts as "active" %}'><a href="{% url core:contacts %}">{% trans "Contacts" %}</a></li>
+          <li class='{% check_location banlist:index as "active" %}'><a href="{% url banlist:index %}">{% trans "Banlist" %}</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
