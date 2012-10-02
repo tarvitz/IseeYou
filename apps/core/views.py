@@ -19,3 +19,14 @@ def test(request):
     return {
         'success': True
     }
+
+
+def chrome_extension(request):
+    filename = os.path.join(settings.PROJECT_ROOT, 'media/chrome/bf3ban.crx')
+    if not os.path.exists(filename):
+        return redirect('core:file-not-found')
+    ext = open(filename, 'r')
+    response = HttpResponse()
+    response['Content-Type'] = 'application/x-chrome-extension'
+    response.write(ext.read())
+    return response
