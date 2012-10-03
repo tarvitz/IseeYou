@@ -2,7 +2,7 @@
 {% block content %}
 <div class='control-group'>
     <form class='add ban' id='add-ban-form' method='POST'
-        action='{% if form.instance %}{% url banlist:edit form.instance.pk %}{% else %}{% url banlist:add %}{% endif %}'>
+        action='{% if form.instance.pk %}{% url banlist:edit form.instance.pk %}{% else %}{% url banlist:add %}{% endif %}'>
         {% csrf_token %}
         {% include "forms/bootstrap.html" %}
         {% if form.instance %}
