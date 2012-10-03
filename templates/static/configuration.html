@@ -18,6 +18,7 @@
         </ul>
     </li>
     <li><a href='#configuration'>{% trans "Configuration" %}</a></li>
+    <li><a href='{% url core:faq %}#how_it_works'>{% trans "How to use?" %}</a></li>
 </ul>
 
 <ul class='faq answers'>
@@ -86,6 +87,10 @@
                 </div>
             </li>
         </ul>
+    </li>
+    <li><a name='how_it_works'>{% trans "How to use?" %}</a>
+        {% trans "Please read the section follow the link" %}:
+        <a href='{% url core:faq %}#how_it_works'>{% trans "How to use" %}</a>
     </li>
 </ul>
 

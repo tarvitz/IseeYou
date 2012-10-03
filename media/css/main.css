@@ -45,3 +45,6 @@
 .icon-yandexmoney{
     background-position: 0px -32px;
 }
+ul.list li{
+    list-style-type: square;
+}

@@ -1,0 +1,34 @@
+{% extends base %}{% load i18n %}
+{% block content %}
+
+<h1>{% trans "Features" %}</h1>
+<hr />
+<h3>{% trans "Current version of bf3block has follow features" %}:</h3>
+
+<ul class='features list'>
+    <li>
+        <strong>{% trans "Single/Multiple server blockage via IP" %}</strong>
+        <br>
+        <a rel='lightbox[pic]' href='/media/faq/result_searching_3.png' title='{% trans "GOT banned" %}'>
+            <img src='/media/faq/result_searching_3_thmb.png' alt='{% trans "got banned" %}' />
+        </a>
+    </li>
+    <li>
+        <strong>{% trans "Server ip addresses show in much comfortable way" %}</strong>
+        <br />
+        <a rel='lightbox[pic]' href='/media/features/ip_addresses.png' title='{% trans "IP addresses" %}'>
+            <img src='/media/features/ip_addresses_thmb.png' alt='{% trans "ip addresses" %}' />
+        </a>
+    </li>
+    <li><strong>{% trans "Different storage sources (HTTP1.1 GET feature required)" %}</strong><br>
+        {% blocktrans %}
+            You can easily use even local storage application, which one provides sending data within HTTP GET response<br>
+            Or implement your own server-side storage server like this.
+        {% endblocktrans %}
+        <br>
+        <a rel='lightbox[pic]' href='/media/features/storage.png' title='{% trans "IP addresses" %}'>
+            <img src='/media/features/storage_thmb.png' alt='{% trans "ip addresses" %}' />
+        </a>
+    </li>
+</ul>
+{% endblock %}
