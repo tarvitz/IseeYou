@@ -5,8 +5,13 @@ from django.utils.translation import ugettext_lazy as _
 
 from django.contrib import auth
 from django.contrib.auth.models import User
+from django.conf import settings
 
 from apps.core.helpers import get_object_or_None
+from apps.core.forms import RequestModelForm
+from apps.accounts.models import Invite
+
+from uuid import uuid1
 
 
 class LoginForm(forms.Form):
@@ -69,3 +74,36 @@ class AccountRegisterForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('username', 'email', 'password', 'password2')
+        widgets = {
+            'password': forms.PasswordInput(),
+            'password2': forms.PasswordInput(),
+        }
+
+class InviteRegisterForm(AccountRegisterForm):
+    password = forms.CharField(
+        label=_("Password"), required=True,
+        widget=forms.PasswordInput())
+
+    class Meta:
+        model = User
+        fields = ('username', 'password', 'password2', )
+
+class SendInviteForm(RequestModelForm):
+    def clean(self):
+        cd = self.cleaned_data
+        user = self.request.user
+        if user.invites >= settings.MAX_INVITES_COUNT:
+            msg = _("Your are out of invite limit, sorry for that :)")
+            self._errors['email'] = ErrorList([msg])
+            if 'email' in cd:
+                del cd['email']
+        return cd
+
+    def save(self, commit=True):
+        super(SendInviteForm, self).save(commit=commit)
+        self.instance.sid = uuid1().get_hex()
+        self.instance.sender = self.request.user
+
+    class Meta:
+        model = Invite
+        fields = ('email', )

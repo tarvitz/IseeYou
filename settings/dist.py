@@ -10,7 +10,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Saul Tarvitz', 'tarvitz@blacklibrary.ru'),
 )
 
 MANAGERS = ADMINS
@@ -193,3 +193,4 @@ TINY_MCE_BUTTONS=[
 THROTTLE_AT=300
 ENABLE_THROTTLING=True
 REGISTER_ALLOWED=True
+MAX_INVITES_COUNT=5

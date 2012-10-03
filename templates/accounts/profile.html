@@ -7,6 +7,8 @@
         <li id='apikey'>{% trans "Your personal api-key" %}: <b id='key'>{{ user.api_key.key }}</b>
             <a href="#" data-toggle='modal' 
                 class='btn btn-link' data-target='#confirmDialogue'>{% trans "Revoke and reload" %}</a></li>
+        <li>{% trans "Invites used" %}: <b>{{ user.invites }}
+        {% trans "of" context "used of" %} {{ global_settings.MAX_INVITES_COUNT }}</b></li>
     </ul>
 </div>
 <div class='modal fade in hide' id='confirmDialogue'>

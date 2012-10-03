@@ -31,4 +31,7 @@ urlpatterns = patterns('apps.core.views',
     url(r'^file/not/found/$', direct_to_template,
         {'template': 'static/file_not_found.html'},
         name='file-not-found'),
+    url(r'^ufo/$', direct_to_template,
+        {'template': 'static/ufo.html'},
+        name='ufo'),
 )

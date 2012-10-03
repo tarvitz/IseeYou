@@ -37,7 +37,8 @@
             {{ user.username }}
           <i class='caret'></i></a>
           <ul class='dropdown-menu'>
-                <li><a href='{% url accounts:profile %}'>View profile</a></li>
+                <li><a href='{% url accounts:profile %}'>{% trans "View profile" %}</a></li>
+                <li><a href='{% url accounts:invite %}'>{% trans "Invite friend" %}</a></li>
                 <li class='divider'>&nbsp;</li>
                 <li><a href='{% url accounts:logout %}'>Logout</a></li>
           </ul>
