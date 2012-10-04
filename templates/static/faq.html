@@ -25,17 +25,17 @@
         {% trans "Please, read follow " %}<a href='{% url core:configuration %}'>{% trans "link" %}</a> {% trans "to succeed." %}
     </li>
     <li>
-        <a name='register'>Can I register?</a>
+        <a name='register'>{% trans "Can I register" %}?</a>
         {% blocktrans %}
             I am sorry but you can not register for now, but you could recive invite and use this resource as normal user.<br>
             Please read information how to get invitation <a href='#invite'>below</a>.
         {% endblocktrans %}
     </li>
     <li>
-        <a name='invite'>How can I recieve invite?</a>
+        <a name='invite'>{% trans "How can I recieve invite" %}?</a>
             {% trans "Please visit following links" %}: <br>
             <ul class='links'>
-                <li><a href='#'>Bla-bla (russian)</a></li>
+                <li><a href='http://stopgame.ru/blogs/topic/42512'>{% trans "read this" %}</a></li>
                 <li><a href='#'>International</a></li>
             </ul>
     </li>
