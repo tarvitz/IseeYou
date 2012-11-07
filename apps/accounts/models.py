@@ -62,13 +62,13 @@ User.__bases__ = (UserExtenssion,) + User.__bases__
 
 from django.contrib.auth.admin import UserAdmin
 UserAdmin.list_display += ('invites', )
-UserAdmin.fieldsets += ((
-    _('Profile'),
-    {
-        'fields': ('invites', ),
-        'classes': ('collapse',),
-    }
-),)
+#UserAdmin.fieldsets += ((
+#    _('Profile'),
+#    {
+#        'fields': ('invites', ),
+#        'classes': ('collapse',),
+#    }
+#),)
 
 
 # signals
