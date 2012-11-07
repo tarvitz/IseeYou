@@ -55,7 +55,7 @@ def generate_new_api_key(request):
 @lock("REGISTER_ALLOWED")
 @render_to('accounts/register.html')
 def register(request):
-    form = AccountRegisterForm(request.POST or None, request=request)
+    form = AccountRegisterForm(request.POST or None)
     if request.method == "POST":
         if form.is_valid():
             user = form.save(commit=False)

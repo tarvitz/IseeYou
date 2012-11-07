@@ -16,28 +16,21 @@ from uuid import uuid1
 
 class LoginForm(forms.Form):
     username = forms.CharField(label=_("Username"))
-    password1 = forms.CharField(
+    password = forms.CharField(
         label=_("Password"), widget=forms.PasswordInput())
-    password2 = forms.CharField(
-        _("Password repeat"), widget=forms.PasswordInput())
 
     def clean(self):
         cd = self.cleaned_data
         username = cd.get('username')
-        password1 = cd.get('password1')
-        password2 = cd.get('password2')
-        if password1 != password2:
-            msg = _("Sorry passwords you entered does not match each other")
-            self._errors['password1'] = ErrorList([msg])
-            if 'password1' in cd:
-                del cd['password1']
-        user = auth.authenticate(username=username, password=password1)
+        password = cd.get('password')
+        user = auth.authenticate(username=username, password=password)
+
         if not user:
             # fail to authenticate, probabbly incorrect auth data
             msg = _("Sorry your username or/and password are invalid")
-            self._errors['password1'] = ErrorList([msg])
-            if 'password1' in cd:
-                del cd['password1']
+            self._errors['password'] = ErrorList([msg])
+            if 'password' in cd:
+                del cd['password']
 
         cd['user'] = user
         return cd
