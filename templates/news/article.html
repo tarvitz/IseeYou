@@ -4,6 +4,6 @@
     <div class='title'>
         {{ article.title }}
     </div>
-    <div class='content'>{{ article.content|truncatewords_html:"40"|safe }}</div>
+    <div class='content'>{{ article.content|safe }}</div>
  </div>
 {% endblock %}
