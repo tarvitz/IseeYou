@@ -38,6 +38,11 @@ TIME_ZONE = 'Europe/Moscow'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
+_ = lambda s: s
+LANGUAGES = (
+    ('en', _('English')),
+    ('ru', _('Russian'))
+)
 LANGUAGE_CODE = 'en'
 
 SITE_ID = 1
@@ -138,11 +143,13 @@ INSTALLED_APPS = (
     'apps.core',
     'apps.accounts',
     'apps.banlist',
+    'apps.news',
     'south',
     # Uncomment the next line to enable the admin:
     'grappelli',
     'django.contrib.admin',
     'tastypie',
+    'hvad',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

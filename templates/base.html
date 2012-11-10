@@ -83,6 +83,7 @@
           <li class="active"><a href="#">News</a></li>
           {% endif %}
           {% endcomment %}
+          <li class='{% check_location news:news as "active" %}'><a href='{% url news:news %}'>{% trans "News" %}</a></li>
           <li class='{% check_location core:about as "active" %}'><a href="{% url core:about %}">{% trans "About" %}</a></li>
           <li class='{% check_location core:faq as "active" %}'><a href='{% url core:faq %}'>{% trans "FAQ" %}</a></li>
           <li class='{% check_location core:configuration as "active" %}'><a href='{% url core:configuration %}'>{% trans "Configuration" %}</a></li>

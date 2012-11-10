@@ -1,0 +1,18 @@
+{% extends base %}{% load i18n %}
+{% block content %}
+<div class='news'>
+    <h3>{% trans "News, news, news ;)" %}</h3>
+    {% if news %}
+    {% for article in news %}
+        <div class='article'>
+            <div class='title'>
+                <a href='{% url news:article article.pk %}'>{{ article.title }}</a>
+            </div>
+            <div class='content'>{{ article.content|truncatewords_html:"40"|safe }}</div>
+         </div>
+    {% endfor %}
+    {% else %}
+    <h3>{% trans "Nope, there ain't anything worth here ;)" %}</h3>
+    {% endif %}
+</div>
+{% endblock %}

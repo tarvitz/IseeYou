@@ -50,3 +50,26 @@ form li{
 ul.list li{
     list-style-type: square;
 }
+div.article .title{
+    font-weight: bold;
+    font-size: 14pt;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+div.article .title a:hover{
+    text-decoration: none;
+}
+div.article .title{
+    position: relative;
+}
+div.article .title a:before{
+    content: "*";
+    color: #000;
+    vertical-align: middle;
+    position: absolute;
+    top: 3px;
+    left: -10px;
+}
+div.article .title a:hover:before{
+    color: red;
+}

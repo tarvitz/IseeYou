@@ -1,0 +1,9 @@
+{% extends base %}{% load i18n %}
+{% block content %}
+<div class='article'>
+    <div class='title'>
+        {{ article.title }}
+    </div>
+    <div class='content'>{{ article.content|truncatewords_html:"40"|safe }}</div>
+ </div>
+{% endblock %}
