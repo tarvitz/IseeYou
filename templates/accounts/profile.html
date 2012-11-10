@@ -10,6 +10,7 @@
         <li>{% trans "Invites used" %}: <b>{{ user.invites }}
         {% trans "of" context "used of" %} {{ global_settings.MAX_INVITES_COUNT }}</b></li>
     </ul>
+    <a class='btn btn-primary' href='{% url accounts:password-change %}'>{% trans "Change password" %}</a>
 </div>
 <div class='modal fade in hide' id='confirmDialogue'>
     <div class='modal-header'>

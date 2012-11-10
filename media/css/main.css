@@ -15,10 +15,12 @@
 /* endof news */
 
 /* forms */
+form li{
+    list-style-type: none;
+}
 .filter-form{
     display: inline-block;
 }
-
 .form-errors{
     color: red;
 }
