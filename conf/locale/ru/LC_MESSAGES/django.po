@@ -1,0 +1,1044 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-11 19:39+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: apps/accounts/forms.py:21 templates/accounts/profile.html:5
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: apps/accounts/forms.py:23 apps/accounts/forms.py:81
+#: apps/accounts/forms.py:128
+msgid "Password"
+msgstr "Пароль"
+
+#: apps/accounts/forms.py:33
+msgid "Sorry your username or/and password are invalid"
+msgstr "Пользовател и/или пароли не правельны"
+
+#: apps/accounts/forms.py:44 apps/accounts/forms.py:45
+msgid "Repeat password"
+msgstr "Повторение пароля"
+
+#: apps/accounts/forms.py:53
+msgid ""
+"Sorry but such username already taken,                   please choose "
+"another or login"
+msgstr ""
+"Данное имя уже занято, пожалуйста, выберете другое или залогинитесь"
+
+#: apps/accounts/forms.py:64
+msgid "Passwords does not match, please correct them"
+msgstr "Пароли не совпадают, пожалуйста, исправьте их"
+
+#: apps/accounts/forms.py:94
+msgid "Your are out of invite limit, sorry for that :)"
+msgstr "Вы исчерпали свой лимит приглашений"
+
+#: apps/accounts/forms.py:112 apps/accounts/models.py:31
+msgid "Email"
+msgstr "Email"
+
+#: apps/accounts/forms.py:112
+msgid "Your email"
+msgstr "Ваш email"
+
+#: apps/accounts/forms.py:120
+msgid "Users with given email does not exists"
+msgstr "Пользователей с предложенным email не существует"
+
+#: apps/accounts/forms.py:131
+msgid "Password repeat"
+msgstr "Повторение пароля"
+
+#: apps/accounts/forms.py:140 apps/accounts/forms.py:188
+msgid "Passwords don't match"
+msgstr "Пароли не совпадают"
+
+#: apps/accounts/forms.py:164
+msgid "Old password"
+msgstr "Старый пароль"
+
+#: apps/accounts/forms.py:167
+msgid "New password"
+msgstr "Новый пароль"
+
+#: apps/accounts/forms.py:170
+msgid "New password repeat"
+msgstr "Повторение нового пароля"
+
+#: apps/accounts/forms.py:182
+msgid "Old password does not match"
+msgstr "Старый пароль не верен"
+
+#: apps/accounts/models.py:13
+msgid "is expired?"
+msgstr "истекает?"
+
+#: apps/accounts/models.py:15
+msgid "expire date"
+msgstr "дата истечения"
+
+#: apps/accounts/models.py:15
+msgid "date and time when invite is expired"
+msgstr "дата и время, когда истекает приглашение"
+
+#: apps/accounts/models.py:19 apps/banlist/models.py:20 apps/core/models.py:24
+#: apps/news/models.py:22
+msgid "created on"
+msgstr "создано"
+
+#: apps/accounts/models.py:19
+msgid "created date of invitation"
+msgstr "дата создания приглашения"
+
+#: apps/accounts/models.py:23 apps/banlist/models.py:22 apps/core/models.py:28
+#: apps/news/models.py:18
+msgid "updated on"
+msgstr "обновлено"
+
+#: apps/accounts/models.py:23
+msgid "date when this was updated last time"
+msgstr "дата, когда сущность была обновлена"
+
+#: apps/accounts/models.py:31
+msgid "Friend email"
+msgstr "Email друга"
+
+#: apps/accounts/models.py:35 apps/core/models.py:15
+msgid "SID"
+msgstr "SID"
+
+#: apps/accounts/models.py:35
+msgid "SpecialID for registration"
+msgstr "СпециальныйID для регистрации"
+
+#: apps/accounts/models.py:39
+msgid "is verified?"
+msgstr "подтвержден?"
+
+#: apps/accounts/models.py:39
+msgid "shows if user is verified"
+msgstr "показывает подтвержден ли пользователь"
+
+#: apps/accounts/models.py:46 templates/accounts/invite.html:6
+msgid "Invite"
+msgstr "Приглашение"
+
+#: apps/accounts/models.py:47
+msgid "Invites"
+msgstr "Приграшении"
+
+#: apps/accounts/models.py:53
+msgid "invites"
+msgstr "приглашении"
+
+#: apps/accounts/models.py:53
+msgid "intites count"
+msgstr "количество приглашений"
+
+#: apps/accounts/views.py:94
+msgid "You have been invited to b3ban service"
+msgstr "Вы были приглашены на b3ban ресурс"
+
+#: apps/accounts/views.py:152
+msgid "Your password requested to change"
+msgstr "Ваш пароль был запрошен на изменение"
+
+#: apps/banlist/models.py:9
+msgid "Type"
+msgstr "Тип"
+
+#: apps/banlist/models.py:11
+msgid ""
+"Ban type, e.x. can not                     login beacuse of being banned as "
+"RUSSIAN"
+msgstr ""
+"Тип бана, например не могу зайти по причине того, что я из России"
+""
+
+#: apps/banlist/models.py:16
+msgid "reason"
+msgstr "причина"
+
+#: apps/banlist/models.py:32
+msgid "Nickname"
+msgstr "Никнейм"
+
+#: apps/banlist/models.py:32
+msgid "Nickname of banned user"
+msgstr "Никнейм забанненого пользователя"
+
+#: apps/banlist/models.py:42
+msgid "ip address"
+msgstr "ip адрес"
+
+#: apps/banlist/models.py:42
+msgid "Server ip address"
+msgstr "IP адрес сервера"
+
+#: apps/banlist/models.py:44
+msgid "server name"
+msgstr "имя сервера"
+
+#: apps/banlist/resources.py:29
+msgid "Shows when spot was created"
+msgstr "Показывает, когда была создана точка"
+
+#: apps/core/handlers.py:34
+#, python-format
+msgid "Uploaded file exceeded size limit set to %(size)smb and was dropped"
+msgstr ""
+
+#: apps/core/helpers.py:232
+msgid "Not found"
+msgstr "Не найден"
+
+#: apps/core/models.py:18
+msgid "Expires"
+msgstr "Истекает"
+
+#: apps/core/models.py:21
+msgid "expired?"
+msgstr "истекает?"
+
+#: apps/core/models.py:37
+msgid "UserSID"
+msgstr "Пользовательский SID"
+
+#: apps/core/models.py:38
+msgid "UserSIDs"
+msgstr "Пользовательские SID-ы"
+
+#: apps/news/admin.py:27 apps/news/models.py:12
+msgid "Title"
+msgstr "Заголовок"
+
+#: apps/news/admin.py:32 apps/news/models.py:15
+msgid "Content"
+msgstr "Контент"
+
+#: apps/news/models.py:30 apps/news/models.py:31 templates/base.html:88
+msgid "News"
+msgstr "Новости"
+
+#: settings/dist.py:43
+msgid "English"
+msgstr "Английский"
+
+#: settings/dist.py:44
+msgid "Russian"
+msgstr "Русский"
+
+#: settings/messages.py:3
+#, python-format
+msgid ""
+"\n"
+"    \n"
+"    %(user)s Greatings you and whole blacklibrary administration.\n"
+"    You have been invited to b3ban.blacklibrary.ru.\n"
+"    If you don't know whats this site/service does please ignore it or wait\n"
+"    for explanation from your friends playing in battlefield 3.\n"
+"    Please click follow the %(link)s and follow given instructions\n"
+"    to proceed the registration.\n"
+"\n"
+"    If you got this letter accidently, please ignore it, nothing bad would "
+"happen :)\n"
+"\n"
+"    Sincerely your b3ban.blacklibrary.ru administration\n"
+msgstr ""
+"\n"
+"    \n"
+"    %(user)s Приветствует вас вместе со всей администрацией blacklibrary.ru.\n"
+"    Вас пригласили на b3ban.blacklibrary.ru.\n"
+"    Если вы не знаете что это за сайт/сервис, пожалуйста, проигнорируйте это письмо или\n"
+"    подождите объяснений от ваших друзей, которые играют в battlefield 3.\n"
+"    Пожалуйста, перейдтите по данной ссылке %(link)s и следуйте инструкциям по ней\n"
+"    для того, чтобы выполнить регистрацию.\n"
+"\n"
+"    Если вы получили это письмо случайно, пожалуйста проигнорируйте его, ничего страшного не случится ;)\n"
+"\n"
+"    C уважением, администрация b3ban.blacklibrary.ru\n"
+
+#: settings/messages.py:16
+#, python-format
+msgid ""
+"\n"
+"    Your or somebody else requested password change for this email account.\n"
+"    If you're not the person who initiated password request procedure, "
+"please ignore\n"
+"    this letter or give a notice for service administration:\n"
+"    http://b3ban.blacklibrary.ru/contacts/\n"
+"\n"
+"    Your password restore link: %(link)s\n"
+msgstr ""
+"\n"
+"    Вы или кто-то другой запросили процедуру смены пароля для данного аккаунта emauk\n"
+"    Если это были не вы, пожалуйста проигнорируйте письмо и проинформируйте администрацию\n"
+"    Сервиса (http://b3ban.blacklibrary.ru/contacts/) \n"
+"    If you're not the person who initiated password request procedure, "
+"\n"
+"    Ваша ссылка на восстановление пароля: %(link)s\n"
+
+#: templates/base.html:40
+msgid "View profile"
+msgstr "Просмотреть профиль"
+
+#: templates/base.html:41
+msgid "Invite friend"
+msgstr "Пригласить друга"
+
+#: templates/base.html:62 templates/index.html:14
+#: templates/accounts/login.html:6 templates/static/configuration.html:51
+msgid "Login"
+msgstr "Войти"
+
+#: templates/base.html:63 templates/index.html:13
+#: templates/accounts/invite_register.html:6
+#: templates/accounts/register.html:6 templates/static/configuration.html:15
+#: templates/static/configuration.html:38
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+#: templates/base.html:89 templates/static/about.html:3
+msgid "About"
+msgstr "О ресурсе"
+
+#: templates/base.html:90 templates/static/configuration.html:3
+#: templates/static/faq.html:3 templates/static/faq.html.py:10
+#: templates/static/file_not_found.html:6
+msgid "FAQ"
+msgstr "ЧаВо"
+
+#: templates/base.html:91 templates/static/configuration.html:20
+#: templates/static/configuration.html:49
+msgid "Configuration"
+msgstr "Конфигурация"
+
+#: templates/base.html:92 templates/static/contacts.html:3
+msgid "Contacts"
+msgstr "Контакты"
+
+#: templates/base.html:93 templates/static/features.html:4
+msgid "Features"
+msgstr "Возможности"
+
+#: templates/base.html:94
+msgid "Banlist"
+msgstr "Бан-лист"
+
+#: templates/index.html:5
+msgid ""
+"\n"
+"    Sick and tired to get spoiled servers with uncommon behaviour?<br>\n"
+"    Sick and tired admins abuse?<br>\n"
+"    Sick and tired anything else and wanna ban server?<br>\n"
+"    <br>\n"
+"    So you're welcome!\n"
+"    "
+msgstr ""
+"\n"
+"    Устали от хреновых серверов с непонятыми правилами?<br> \n"
+"    Устали от админского произвола?<br>\n"
+"    Устали от чего бы то ни было и хотите забанить сервер?<br>\n"
+"    <br>\n"
+"    Добро пожаловать ;)!\n"
+"    "
+
+#: templates/accounts/invite_register_success.html:3
+msgid "You registered successful, please "
+msgstr "Регистрация прошла успешна, пожалуйста"
+
+#: templates/accounts/invite_register_success.html:3
+msgid "login"
+msgstr "войдите"
+
+#: templates/accounts/invite_success.html:3
+msgid "Invite successful proceeded"
+msgstr "Инвайт был выслан"
+
+#: templates/accounts/login.html:8
+msgid "Forgot password?"
+msgstr "Забыли пароль?"
+
+#: templates/accounts/password_change.html:3
+msgid "Password change"
+msgstr "Изменение пароля"
+
+#: templates/accounts/password_change.html:7
+msgid "Change"
+msgstr "Изменить"
+
+#: templates/accounts/password_changed.html:3
+msgid "Your password was changed successfully"
+msgstr "Ваш пароль был изменен"
+
+#: templates/accounts/password_restore.html:7
+#: templates/accounts/profile.html:13
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: templates/accounts/password_restore_initiate.html:3
+msgid "Password recover initiate procedure"
+msgstr "Восстановление пароля"
+
+#: templates/accounts/password_restore_initiate.html:7
+msgid "Initiate"
+msgstr "Начать"
+
+#: templates/accounts/profile.html:6
+msgid "Date joined"
+msgstr "Дата регистрации"
+
+#: templates/accounts/profile.html:7
+msgid "Your personal api-key"
+msgstr "Ваш персональный api-ключ"
+
+#: templates/accounts/profile.html:9
+msgid "Revoke and reload"
+msgstr "Отозвать и обновить"
+
+#: templates/accounts/profile.html:10
+msgid "Invites used"
+msgstr "Использовано инвайтов"
+
+#: templates/accounts/profile.html:11
+msgctxt "used of"
+msgid "of"
+msgstr "из"
+
+#: templates/accounts/profile.html:18
+msgid "Revoke and generate new apikey?"
+msgstr "Отозвать и сгенерировать новый api-ключ?"
+
+#: templates/accounts/profile.html:21
+msgid "Your old key will be erased and stop work, use your new one instead"
+msgstr "Ваш старый ключ будет удален и перестанет работать, используйте ваш новый вместо него"
+
+#: templates/accounts/profile.html:22
+msgid "Are you sure you want to complete this action?"
+msgstr "Вы уверены, что хотите выполнить это действие?"
+
+#: templates/accounts/profile.html:25
+msgid "Yes"
+msgstr "Да"
+
+#: templates/accounts/profile.html:26
+msgid "No"
+msgstr "Нет"
+
+#: templates/accounts/profile.html:47
+msgid "Updated"
+msgstr "Обновлен"
+
+#: templates/banlist/add.html:9
+msgid "Back to banlist"
+msgstr "Назад к банлисту"
+
+#: templates/banlist/add.html:11
+msgid "Save, Add"
+msgstr "Сохранить, Добавить"
+
+#: templates/banlist/index.html:6
+msgid "Wanna add ban?"
+msgstr "Хотите добавить бан?"
+
+#: templates/banlist/index.html:11
+msgid "Add"
+msgstr "Добавить"
+
+#: templates/banlist/index.html:20
+msgid "#"
+msgstr "№"
+
+#: templates/banlist/index.html:21
+msgid "Server name"
+msgstr "Имя сервера"
+
+#: templates/banlist/index.html:22
+msgid "Server ip"
+msgstr "IP сервера"
+
+#: templates/banlist/index.html:23
+msgid "Reason"
+msgstr "Причина"
+
+#: templates/banlist/index.html:24
+msgid "Created on"
+msgstr "Создано"
+
+#: templates/banlist/index.html:25
+msgid "Administrate"
+msgstr "Администрировать"
+
+#: templates/banlist/index.html:41
+msgid "Are your sure you want to delete this server?"
+msgstr "Вы уверены, что хотите удалить этот сервер?"
+
+#: templates/banlist/index.html:43
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/banlist/index.html:44
+msgid "Edit"
+msgstr "Править"
+
+#: templates/banlist/index.html:51
+msgid "No bans found"
+msgstr "Банов пока нет"
+
+#: templates/forms/bootstrap.html:5
+msgid "Error!"
+msgstr "Ошибка!"
+
+#: templates/forms/bootstrap.html:6
+msgid "Form was not filled correctly. Changes are not saved."
+msgstr "Форма не была заполнена правильно. Изменения не сохранены."
+
+#: templates/jtmpl/core.html:6
+msgid "Information"
+msgstr "Информация"
+
+#: templates/jtmpl/core.html:12
+msgid "Information tag"
+msgstr "Информационная метка"
+
+#: templates/jtmpl/core.html:18
+msgid "Ok"
+msgstr "Ок"
+
+#: templates/jtmpl/core.html:27
+msgid "Proceed the action?"
+msgstr "Выполнить действие?"
+
+#: templates/jtmpl/core.html:33
+msgid "Do you want to proceed the action?"
+msgstr "Вы хотите выполнить действие?"
+
+#: templates/jtmpl/core.html:44
+msgid "Yes, I do"
+msgstr "Да, хочу"
+
+#: templates/jtmpl/core.html:47
+msgid "No, i don't"
+msgstr "Нет, не хочу"
+
+#: templates/news/news.html:4
+msgid "News, news, news ;)"
+msgstr "Новости, новости, новости ;)"
+
+#: templates/news/news.html:15
+msgid "Nope, there ain't anything worth here ;)"
+msgstr "Неа, нет тут ничего ;)"
+
+#: templates/static/about.html:5
+msgid ""
+"\n"
+"I started this project to get rid off some servers I don't wanna play on."
+"<br>\n"
+"Why? We all know how simple to fall in rage playing battlefield 3, yet we "
+"know<br>\n"
+"how many reasons exist that may be enough to ban someone or something and "
+"forget about<br>\n"
+"it forever and ever :).<br><br>\n"
+"Decision had been made to make some sort of service that handles ban and "
+"some sort of extension<br>\n"
+"in browser that help to hide and block banned servers.<br>\n"
+"With great pleasure I'd want to use IT native within battle-log (shame on "
+"it). But DICE still<br>\n"
+"have no any certain idea when (I think that it would be nowhen and nohow) "
+"and how it implement.<br>\n"
+"I also though that premium players ask hard enough to make DICE do it, but I "
+"wasn wrong.<br><br>\n"
+"I thought about many people with the same problems and did something to "
+"solve within userspace.<br>\n"
+"<br>\n"
+"So that's it. I'm happy and shinning with possibility to ban servers I don't "
+"wanna play on.<br>\n"
+msgstr ""
+
+#: templates/static/configuration.html:10
+msgid "Configuration page"
+msgstr "Страница конфигурации"
+
+#: templates/static/configuration.html:14
+#: templates/static/configuration.html:25
+msgid "Requirements"
+msgstr "Требования"
+
+#: templates/static/configuration.html:17
+#: templates/static/configuration.html:44
+msgid "Recieving invite"
+msgstr "Получение инвайта"
+
+#: templates/static/configuration.html:21
+#: templates/static/configuration.html:91
+msgid "How to use?"
+msgstr "Как использовать?"
+
+#: templates/static/configuration.html:27
+msgid ""
+"\n"
+"            <a href='https://chrome.google.com/'>Chrome browser</a>\n"
+"            verion not lower than <b>22.0.1229.14</b>, please use last "
+"stable and secure one\n"
+"            "
+msgstr ""
+
+#: templates/static/configuration.html:32
+msgid ""
+"\n"
+"            Account on <a href='http://b3ban.blacklibrary.ru/'>b3ban."
+"blacklibrary.ru</a>\n"
+"            "
+msgstr ""
+
+#: templates/static/configuration.html:39
+msgid ""
+"\n"
+"            You can not register free now, because server in test mode and "
+"it was reserved for few amount of people, who would use it.<br>\n"
+"            It should not be a big deal or problem to recieve invite (please "
+"see information below)\n"
+"        "
+msgstr ""
+
+#: templates/static/configuration.html:45
+msgid ""
+"\n"
+"            You should follow instructions given by this (for russian users) "
+"<a href='http://stopgame.ru/blogs/topic/42512'>link</a>.\n"
+"        "
+msgstr ""
+
+#: templates/static/configuration.html:52
+msgid "with b3ban.blacklibrary.ru"
+msgstr ""
+
+#: templates/static/configuration.html:55
+msgid "Read account information data via your"
+msgstr ""
+
+#: templates/static/configuration.html:56
+msgid "profile"
+msgstr ""
+
+#: templates/static/configuration.html:57
+msgid "And copy api_key value into the clipboard"
+msgstr ""
+
+#: templates/static/configuration.html:60
+msgid "Click on options link via extension popup (see the picture below)"
+msgstr ""
+
+#: templates/static/configuration.html:63
+#: templates/static/configuration.html:64
+msgid "Popup options"
+msgstr ""
+
+#: templates/static/configuration.html:67
+msgid ""
+"Set proper options, set your username and api key by copy-pasting from your "
+"profile page"
+msgstr ""
+
+#: templates/static/configuration.html:68
+msgid "You should set b3ban.blacklibrary.ru as server"
+msgstr ""
+
+#: templates/static/configuration.html:71
+msgid "Your api key"
+msgstr ""
+
+#: templates/static/configuration.html:72
+msgid "Api key"
+msgstr ""
+
+#: templates/static/configuration.html:76
+msgid "Options"
+msgstr ""
+
+#: templates/static/configuration.html:77
+msgid "Options window"
+msgstr ""
+
+#: templates/static/configuration.html:82
+msgid ""
+"\n"
+"                    <b>Click</b>\n"
+"                    <span class='btn btn-success btn-small'>Save</span> "
+"<b>and wait for response</b>\n"
+"                "
+msgstr ""
+
+#: templates/static/configuration.html:86
+msgid "That's all configuration before first use"
+msgstr ""
+
+#: templates/static/configuration.html:92
+msgid "Please read the section follow the link"
+msgstr ""
+
+#: templates/static/configuration.html:93
+msgid "How to use"
+msgstr ""
+
+#: templates/static/contacts.html:4
+msgid ""
+"\n"
+"    You can contact with me via:\n"
+msgstr ""
+
+#: templates/static/contacts.html:8
+msgid "My email: tarvitz [at] blacklibrary [dot] ru, please do not spam me :)"
+msgstr ""
+
+#: templates/static/contacts.html:9
+msgid ""
+"\n"
+"    My jabber ID: tarvitz [at] jabber [dot] ru, tarvitz [at] blacklibrary "
+"[dot] ru, <br>\n"
+"        the second one is a little bit broken but I'll fix it soon"
+msgstr ""
+
+#: templates/static/does_not_exists.html:3
+msgid "Sorry, object you want to process does not exists"
+msgstr ""
+
+#: templates/static/faq.html:12 templates/static/faq.html.py:24
+msgid "What is needed to make it work?"
+msgstr ""
+
+#: templates/static/faq.html:13
+msgid "Can I register?"
+msgstr ""
+
+#: templates/static/faq.html:14
+msgid "How can I recive invite?"
+msgstr ""
+
+#: templates/static/faq.html:15
+msgid "How it works?"
+msgstr ""
+
+#: templates/static/faq.html:16
+msgid "Can i offer the help with code, interface, design, another stuff?"
+msgstr ""
+
+#: templates/static/faq.html:17
+msgid "Can I donate?"
+msgstr ""
+
+#: templates/static/faq.html:18 templates/static/faq.html.py:102
+msgid "If I donate where money would be spent to?"
+msgstr ""
+
+#: templates/static/faq.html:19 templates/static/faq.html.py:116
+msgid "I don't want to register b3ban.blacklibrary.ru, what I can do this way?"
+msgstr ""
+
+#: templates/static/faq.html:22
+msgid "Answers"
+msgstr ""
+
+#: templates/static/faq.html:25
+msgid "Please, read follow "
+msgstr ""
+
+#: templates/static/faq.html:25
+msgid "link"
+msgstr ""
+
+#: templates/static/faq.html:25
+msgid "to succeed."
+msgstr ""
+
+#: templates/static/faq.html:28
+msgid "Can I register"
+msgstr ""
+
+#: templates/static/faq.html:29
+msgid ""
+"\n"
+"            I am sorry but you can not register for now, but you could "
+"recive invite and use this resource as normal user.<br>\n"
+"            Please read information how to get invitation <a "
+"href='#invite'>below</a>.\n"
+"        "
+msgstr ""
+
+#: templates/static/faq.html:35
+msgid "How can I recieve invite"
+msgstr ""
+
+#: templates/static/faq.html:36
+msgid "Please visit following links"
+msgstr ""
+
+#: templates/static/faq.html:38
+msgid "read this"
+msgstr ""
+
+#: templates/static/faq.html:42
+msgid "How it works"
+msgstr ""
+
+#: templates/static/faq.html:43
+msgid ""
+"\n"
+"        Server holds every ban data you add within your account.\n"
+"        "
+msgstr ""
+
+#: templates/static/faq.html:46 templates/static/faq.html.py:47
+msgid "ban sample"
+msgstr ""
+
+#: templates/static/faq.html:49
+msgid ""
+"\n"
+"        When you get access on battle log servers browser extension will cut "
+"every single server that matches with your ip bans.<br>\n"
+"        So you should know how to get server ip address you want to ban."
+"<br>\n"
+"        It's pretty simple: (watch screenshots below)<br>\n"
+"        "
+msgstr ""
+
+#: templates/static/faq.html:55
+msgid "battle log server list"
+msgstr ""
+
+#: templates/static/faq.html:56
+msgid "servers"
+msgstr ""
+
+#: templates/static/faq.html:58
+msgid "Chosen server"
+msgstr ""
+
+#: templates/static/faq.html:59
+msgid "Server"
+msgstr ""
+
+#: templates/static/faq.html:61 templates/static/faq.html.py:62
+msgid "Add ban step 1"
+msgstr ""
+
+#: templates/static/faq.html:64 templates/static/faq.html.py:65
+msgid "Add ban step 2"
+msgstr ""
+
+#: templates/static/faq.html:67 templates/static/faq.html.py:68
+msgid "Add ban step 3"
+msgstr ""
+
+#: templates/static/faq.html:70
+msgid "Important to know"
+msgstr ""
+
+#: templates/static/faq.html:71
+msgid ""
+"\n"
+"            Extension holds data with local storage, that gives fast speed "
+"communications and prevent storage server for overloading.<br>\n"
+"            So you should remember that every time you add ban for a server "
+"you should reload extension ban list like you can see below:<br>\n"
+"        "
+msgstr ""
+
+#: templates/static/faq.html:75 templates/static/faq.html.py:76
+#: templates/static/faq.html:79 templates/static/faq.html.py:82
+msgid "Search result step 1"
+msgstr ""
+
+#: templates/static/faq.html:78
+msgid "Search result step 2"
+msgstr ""
+
+#: templates/static/faq.html:81
+msgid "Search result step 3"
+msgstr ""
+
+#: templates/static/faq.html:87
+msgid ""
+"\n"
+"            Sure, why not? please then contact me, mail to:<br>\n"
+"            tarvitz [at] blacklibrary dot ru with subject: providing help or "
+"something similar to.<br>\n"
+"        "
+msgstr ""
+
+#: templates/static/faq.html:92
+msgid "Can I donate? "
+msgstr ""
+
+#: templates/static/faq.html:93
+msgid ""
+"\n"
+"            Yes, why not? Donate support you can offer via:\n"
+"            "
+msgstr ""
+
+#: templates/static/faq.html:97
+msgid "bitcoin"
+msgstr ""
+
+#: templates/static/faq.html:98
+msgid "litecoin"
+msgstr ""
+
+#: templates/static/faq.html:99
+msgid "YandexMoney"
+msgstr ""
+
+#: templates/static/faq.html:103
+msgid ""
+"\n"
+"            I think if it would be enough for first time this server would "
+"migrate for separate server platform to get more users, more people can use "
+"it for free :).<br>\n"
+"            The other plan is the improvement of present features, implement "
+"others. For example more user friendly ban operating within battlfield "
+"server browser or friends ban merging with yours (global bans and other "
+"stuff).<br>\n"
+"            You can offer or suggest feature or an idea to be implemented "
+"with or without donation. If it's great it would be in production some "
+"day :).<br>\n"
+"            So I mean the money would be a stimulation for further "
+"improvements.<br>\n"
+"            <div class='hide'>\n"
+"            Almost forgot if you want to support me, but you can not donate "
+"bitcoin, litecoin, yandex money you can offer help following people and "
+"organization (which products used to make this all possible):\n"
+"            <ul class='donations'>\n"
+"                <li><a href=''></a></li>\n"
+"            </ul>\n"
+"            </div>\n"
+"        "
+msgstr ""
+
+#: templates/static/faq.html:117
+msgid ""
+"\n"
+"        Actually you haven't to register <a href='http://b3ban.blacklibrary."
+"ru'>b3ban.blacklibrary.ru</a> because this implements just storage of server "
+"bans and now it's pretty simple one.<br>\n"
+"        If you are developer you can make your own storage application with "
+"HTTP 1.1 GET interface you would use with extension as well as the <a "
+"href='http://b3ban.blacklibrary.ru'>b3ban.blacklibrary.ru</a> users.<br>\n"
+"        Anyway some other day I want to open-source server-side part and put "
+"it on <a href='https://github.com'>github</a>.<br>\n"
+"        Ask me about it in case of emergency :) or wait for this FAQ update "
+"when I'll give information about this all.\n"
+"        "
+msgstr ""
+
+#: templates/static/features.html:6
+msgid "Current version of bf3block has follow features"
+msgstr ""
+
+#: templates/static/features.html:10
+msgid "Single/Multiple server blockage via IP"
+msgstr ""
+
+#: templates/static/features.html:12
+msgid "GOT banned"
+msgstr ""
+
+#: templates/static/features.html:13
+msgid "got banned"
+msgstr ""
+
+#: templates/static/features.html:17
+msgid "Server ip addresses show in much comfortable way"
+msgstr ""
+
+#: templates/static/features.html:19 templates/static/features.html.py:29
+msgid "IP addresses"
+msgstr ""
+
+#: templates/static/features.html:20 templates/static/features.html.py:30
+msgid "ip addresses"
+msgstr ""
+
+#: templates/static/features.html:23
+msgid "Different storage sources (HTTP1.1 GET feature required)"
+msgstr ""
+
+#: templates/static/features.html:24
+msgid ""
+"\n"
+"            You can easily use even local storage application, which one "
+"provides sending data within HTTP GET response<br>\n"
+"            Or implement your own server-side storage server like this.\n"
+"        "
+msgstr ""
+
+#: templates/static/file_not_found.html:3
+msgid "Sorry file you requested was not found"
+msgstr ""
+
+#: templates/static/file_not_found.html:5
+msgid ""
+"It might happend because you requested deleted file, page does not exists or "
+"you have no permissions to download it"
+msgstr ""
+
+#: templates/static/file_not_found.html:6
+msgid "Please read the"
+msgstr ""
+
+#: templates/static/function_blocked.html:4
+msgid ""
+"Sorry, this part of the resource if strict permission or blocked for future "
+"days"
+msgstr ""
+
+#: templates/static/function_blocked.html:6
+msgid ""
+"\n"
+"    Please do not panic, someday it will be free to use for everyone, or "
+"something like this.<br>\n"
+"    If you have problems with login or register, be patient and read"
+msgstr ""
+
+#: templates/static/function_blocked.html:11
+msgid "Thank you for your patience."
+msgstr "Спасибо за ваше терпение."
+
+#: templates/static/password_restore_initiated.html:3
+msgid "Email have been sent, please follow instructions"
+msgstr "Еmail был выслан, пожалуйста следуйте инструкциям в нем"
+
+#: templates/static/password_restored.html:3
+msgid "Your password restored"
+msgstr "Ваш пароль восстановлен"
+
+#: templates/static/ufo.html:5
+msgid ""
+"\n"
+"    We got bad news, UFO had been there, so any data proceeding by this url\n"
+"    or urls before might be broken or mulfunctioned.<br><br>\n"
+"    Sorry O_O.\n"
+"    "
+msgstr ""
+"\n"
+"    Плохие новости, НЛО было тут и похитило все данные по этому адресу.\n"
+"    Поэтому все ссылки и могут быть сломаны или не функционировать.<br><br>\n"
+"    Извините O_O.\n"
+"    "
