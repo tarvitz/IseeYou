@@ -291,3 +291,9 @@ def ajax_response(func):
         response.write(json.dumps(dt, default=model_json_encoder))
         return response
     return wrapper
+
+
+def get_model_content_type(Obj):
+    return ContentType.objects.get(
+        app_label=Obj._meta.app_label,
+        model=Obj._meta.module_name)

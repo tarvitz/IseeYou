@@ -10,7 +10,7 @@
 {% endblock %}
 {% block js %}
 <script type='text/javascript' src='/media/js/jquery-1.7.2.min.js'></script>
-<script type='text/javascript' src='/media/js/bootstrap-2.0.min.js'></script>
+<script type='text/javascript' src='/media/js/bootstrap.min.js'></script>
 <script type='text/javascript' src='/media/js/supersized.3.2.7.min.js'></script>
 <script type='text/javascript' src='/media/js/lightbox.js'></script>
 <script type='text/javascript' src='/media/js/chosen.jquery.js'></script>
@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -31,18 +31,20 @@
       <a class="brand" href="{% url core:index %}">ICu</a>
 
       {% if user.is_authenticated %}
-      <div class='btn-group pull-right'>
-          <a class='btn btn-black dropdown-toggle' data-toggle='dropdown' href='#'>
+      <ul class='nav pull-right'>
+        <li id='user-dropdown' class='dropdown'>
+          <a class='dropdown-toggle' role='button' data-toggle='dropdown' href='#'>
           <i class='icon-user'></i>
             {{ user.username }}
           <i class='caret'></i></a>
-          <ul class='dropdown-menu'>
+          <ul class='dropdown-menu' aria-labeledby='user-dropdown' role='menu'>
                 <li><a href='{% url accounts:profile %}'>{% trans "View profile" %}</a></li>
                 <li><a href='{% url accounts:invite %}'>{% trans "Invite friend" %}</a></li>
                 <li class='divider'>&nbsp;</li>
                 <li><a href='{% url accounts:logout %}'>Logout</a></li>
           </ul>
-      </div>
+        </li>
+      </ul>
 
       {% comment %}
       {% if perms.alter_permissions %}
@@ -66,30 +68,21 @@
 
      <div class="nav-collapse">
         <ul class="nav">
-          {% comment %}
-          {% if perms.change_news or perms.alter_news %}
-          <div class='btn-group pull-right'>
-          <a class='btn btn-info dropdown-toggle' data-toggle='dropdown' href='#'>
-            News
-          <i class='caret'></i></a>
-          <ul class='dropdown-menu'>
-                <li><a href='#'>View news</a></li>
-                <li><a href='#'>Add post</a></li>
-                <li class='divider'>&nbsp;</li>
-                <li><a href='#'>View drafts</a></li>
-          </ul>
-          </div>
-          {% else %}
-          <li class="active"><a href="#">News</a></li>
-          {% endif %}
-          {% endcomment %}
-          <li class='{% check_location news:news as "active" %}'><a href='{% url news:news %}'>{% trans "News" %}</a></li>
-          <li class='{% check_location core:about as "active" %}'><a href="{% url core:about %}">{% trans "About" %}</a></li>
-          <li class='{% check_location core:faq as "active" %}'><a href='{% url core:faq %}'>{% trans "FAQ" %}</a></li>
-          <li class='{% check_location core:configuration as "active" %}'><a href='{% url core:configuration %}'>{% trans "Configuration" %}</a></li>
-          <li class='{% check_location core:contacts as "active" %}'><a href="{% url core:contacts %}">{% trans "Contacts" %}</a></li>
-          <li class='{% check_location core:features as "active" %}'><a href="{% url core:features %}">{% trans "Features" %}</a></li>
-          <li class='{% check_location banlist:index as "active" %}'><a href="{% url banlist:index %}">{% trans "Banlist" %}</a></li>
+            <li class='dropdown' id='menu-dropdown'>
+                <a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button'>
+                    {% trans "Information" %}
+                    <i class='caret'></i>
+                </a>
+                <ul class='dropdown-menu' aria-labelledby='menu-dropdown' role='menu'>
+                  <li class='{% check_location news:news as "active" %}'><a href='{% url news:news %}'>{% trans "News" %}</a></li>
+                  <li class='{% check_location core:about as "active" %}'><a href="{% url core:about %}">{% trans "About" %}</a></li>
+                  <li class='{% check_location core:faq as "active" %}'><a href='{% url core:faq %}'>{% trans "FAQ" %}</a></li>
+                  <li class='{% check_location core:configuration as "active" %}'><a href='{% url core:configuration %}'>{% trans "Configuration" %}</a></li>
+                  <li class='{% check_location core:contacts as "active" %}'><a href="{% url core:contacts %}">{% trans "Contacts" %}</a></li>
+                  <li class='{% check_location core:features as "active" %}'><a href="{% url core:features %}">{% trans "Features" %}</a></li>
+                </ul>
+            </li>
+            <li class='{% check_location banlist:index as "active" %}'><a href="{% url banlist:index %}">{% trans "Banlist" %}</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
