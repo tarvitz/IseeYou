@@ -41,6 +41,10 @@
                 <li><a href='{% url accounts:profile %}'>{% trans "View profile" %}</a></li>
                 <li><a href='{% url accounts:invite %}'>{% trans "Invite friend" %}</a></li>
                 <li class='divider'>&nbsp;</li>
+                {% if user.is_superuser %}
+                <li><a href='/i/c/u/admin/'>{% trans "Admin page" %}</a></li>
+                <li class='divider'>&nbsp;</li>
+                {% endif %}
                 <li><a href='{% url accounts:logout %}'>Logout</a></li>
           </ul>
         </li>
