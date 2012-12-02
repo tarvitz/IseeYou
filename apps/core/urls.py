@@ -6,6 +6,7 @@ urlpatterns = patterns('apps.core.views',
     url(r'^$', 'index', name='index'),
     url(r'^test/$', 'test', name='test'),
     url(r'^extensions/chrome/$', 'chrome_extension', name='chrome-extension'),
+    url(r'set/lang/$', 'set_lang', name='set-lang'),
     #static
     url(r'^function/blocked/$', direct_to_template,
         {'template': 'static/function_blocked.html'},

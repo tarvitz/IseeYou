@@ -112,6 +112,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     'apps.core.context_processors.global_settings',
     'apps.core.context_processors.template',
+    'apps.core.context_processors.language',
 )
 
 MIDDLEWARE_CLASSES = (

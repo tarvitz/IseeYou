@@ -2,7 +2,15 @@
 from django.contrib.sites.models import Site
 from datetime import datetime, timedelta, time
 from django.conf import settings
+from django.utils import translation
 
+
+def language(request):
+    language = request.session.get('language', 'en')
+    translation.activate(language)
+    return {
+        'LANGUAGE_CODE': translation.get_language(),
+    }
 
 def global_referer(request):
     return {
@@ -16,6 +24,7 @@ def global_referer(request):
 def global_settings(request):
     return {
         'global_settings': settings,
+        'gs': settings,
         'get_full_path': request.get_full_path(),
         'current_date': datetime.today(),
         'global_site': Site.objects.get(),
