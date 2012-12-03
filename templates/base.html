@@ -20,6 +20,7 @@
 </head>
 <body>
 
+<div id='wrap'>
 <div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
@@ -108,11 +109,24 @@
     </div>
   </div>
 </div>
-<div class='top spacer'></div>
+<!--<div class='top spacer'></div> -->
 
-<div class='container'>
+<div class='container main top'>
 {% block content %}{% endblock %}
 </div>
+<div id='push'></div>
+</div> <!--wrap -->
+<footer class='footer' id='footer'>
+    <div class='container'>
+        <span class=''>
+            {% trans "Produced by" %}
+            <a href='http://blacklibrary.ru'>blacklibrary.ru</a>,
+            &copy; 2012
+        </span>
+        <span class='pull-right'>
+        </span>
+    </div>
+</footer>
 {# stuff #}
 {% include "jtmpl/core.html" %}
 

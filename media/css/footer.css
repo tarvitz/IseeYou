@@ -1,0 +1,25 @@
+/* sticky footer */
+html, body{
+    height: 100%;
+}
+
+#footer{
+    margin-top: 0px;
+}
+#wrap{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -41px;
+}
+#push{
+    height: 61px; /*60-41 == 20px */
+}
+#footer{
+    height: 20px;
+}
+#footer.footer{
+    padding: 10px;
+    background-color: #e5e5e5;
+    font-size: x-small;
+}
