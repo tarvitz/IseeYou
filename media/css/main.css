@@ -75,6 +75,9 @@ div.article .title a:before{
 div.article .title a:hover:before{
     color: red;
 }
+div.article .content{
+    margin-bottom: 20px;
+}
 .container.main.top{
     padding-top: 80px;
 }
