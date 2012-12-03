@@ -8,7 +8,8 @@
  </div>
  {% if LANGUAGE_CODE == 'en' %}
  <div class="fb-comments" data-href="http://b3ban.blacklibrary.ru" data-width="470" data-num-posts="15"></div>
- {% else if LANGUAGE_CODE == 'ru' %}
+ {% endif %}
+ {% if LANGUAGE_CODE == 'ru' %}
     <!-- Put this div tag to the place, where the Comments block will be -->
     <div id="vk_comments"></div>
     <script type="text/javascript">
