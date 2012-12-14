@@ -81,3 +81,13 @@ div.article .content{
 .container.main.top{
     padding-top: 80px;
 }
+/* social */
+#___plusone_0{
+    overflow: hidden;
+    width: 67px !important;
+}
+.twitter-share-button{
+    width: 80px;
+    position: relative;
+    top: -3px;
+}
