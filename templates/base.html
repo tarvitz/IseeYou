@@ -145,6 +145,7 @@
             &copy; 2012
         </span>
         <span class='pull-right'>
+            <g:plusone href='http://b3ban.blacklibrary.ru/'></g:plusone>
         </span>
     </div>
 </footer>
@@ -158,5 +159,13 @@ $(document).ready(function(){
     $("select.chosen").chosen();
 {% block js_document_ready %}{% endblock %}
 });
+</script>
+<!-- social -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
 </script>
 </body></html>
