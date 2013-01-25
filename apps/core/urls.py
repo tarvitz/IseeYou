@@ -41,4 +41,5 @@ urlpatterns = patterns('apps.core.views',
     url(r'^password/restore/initiated/$', direct_to_template,
         {'template': 'static/password_restore_initiated.html'},
         name='password-restore-initiated'),
+    url(r'^raise/500/$', 'raise_500', name='raise_500'),
 )

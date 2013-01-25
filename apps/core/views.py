@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from django.conf import settings
 from django.shortcuts import redirect
 from django.utils import translation
+from django.core.exceptions import ImproperlyConfigured
 
 def set_lang(request):
     language = request.GET.get('lang', 'en')
@@ -41,3 +42,8 @@ def chrome_extension(request):
     response['Content-Type'] = 'application/x-chrome-extension'
     response.write(ext.read())
     return response
+
+def raise_500(request):
+    if settings.TEST_500:
+        raise ImproperlyConfigured("Oh, no!")
+    return redirect(request.META.get('HTTP_REFERER', '/'))
