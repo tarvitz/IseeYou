@@ -3,7 +3,7 @@
 <form class='login form' id='login-form' action='{% url accounts:login %}' method='POST'>
     {% csrf_token %}
     {% include "forms/bootstrap.html" %}
-    <input type='submit' class='btn-primary btn-medium' value='{% trans "Login" %}' />
+    <input type='submit' class='btn btn-primary btn-medium' value='{% trans "Login" %}' />
     <br />
     <a class='btn btn-inverse' href='{% url accounts:password-restore-initiate %}'>{% trans "Forgot password?" %}</a>
 </form>
