@@ -42,4 +42,8 @@ urlpatterns = patterns('apps.core.views',
         {'template': 'static/password_restore_initiated.html'},
         name='password-restore-initiated'),
     url(r'^raise/500/$', 'raise_500', name='raise_500'),
+    url('^google241ce91bf60b8862.html$', direct_to_template,
+        {'template': 'static/google241ce91bf60b8862.html'},
+        name='google-verification'
+    )
 )
