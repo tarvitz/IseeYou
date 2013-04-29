@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-11 19:39+0300\n"
+"POT-Creation-Date: 2013-04-29 18:00+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: apps/accounts/forms.py:21 templates/accounts/profile.html:5
+#: apps/accounts/forms.py:21 apps/accounts/forms.py:44
+#: apps/accounts/forms.py:90 templates/accounts/profile.html:5
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: apps/accounts/forms.py:23 apps/accounts/forms.py:81
-#: apps/accounts/forms.py:128
+#: apps/accounts/forms.py:23 apps/accounts/forms.py:99
+#: apps/accounts/forms.py:146
 msgid "Password"
 msgstr "Пароль"
 
@@ -30,58 +31,67 @@ msgstr "Пароль"
 msgid "Sorry your username or/and password are invalid"
 msgstr "Пользовател и/или пароли не правельны"
 
-#: apps/accounts/forms.py:44 apps/accounts/forms.py:45
+#: apps/accounts/forms.py:48 apps/accounts/forms.py:94
+msgid ""
+"Try to pass only latin symbols, numbers and underscores with your nickname"
+msgstr ""
+"Попробуйте ввести только латинские символы, цифры и символ подчеркивания"
+
+#: apps/accounts/forms.py:49 apps/accounts/forms.py:95
+msgid "Only latin symbols and numbers and underscore are allowed"
+msgstr "Только латинские символы, цифры и символ подчеркивания разрешены"
+
+#: apps/accounts/forms.py:53 apps/accounts/forms.py:54
 msgid "Repeat password"
 msgstr "Повторение пароля"
 
-#: apps/accounts/forms.py:53
+#: apps/accounts/forms.py:62
 msgid ""
 "Sorry but such username already taken,                   please choose "
 "another or login"
-msgstr ""
-"Данное имя уже занято, пожалуйста, выберете другое или залогинитесь"
+msgstr "Данное имя уже занято, пожалуйста, выберете другое или залогинитесь"
 
-#: apps/accounts/forms.py:64
+#: apps/accounts/forms.py:73
 msgid "Passwords does not match, please correct them"
 msgstr "Пароли не совпадают, пожалуйста, исправьте их"
 
-#: apps/accounts/forms.py:94
+#: apps/accounts/forms.py:112
 msgid "Your are out of invite limit, sorry for that :)"
 msgstr "Вы исчерпали свой лимит приглашений"
 
-#: apps/accounts/forms.py:112 apps/accounts/models.py:31
+#: apps/accounts/forms.py:130 apps/accounts/models.py:31
 msgid "Email"
 msgstr "Email"
 
-#: apps/accounts/forms.py:112
+#: apps/accounts/forms.py:130
 msgid "Your email"
 msgstr "Ваш email"
 
-#: apps/accounts/forms.py:120
+#: apps/accounts/forms.py:138
 msgid "Users with given email does not exists"
 msgstr "Пользователей с предложенным email не существует"
 
-#: apps/accounts/forms.py:131
+#: apps/accounts/forms.py:149
 msgid "Password repeat"
 msgstr "Повторение пароля"
 
-#: apps/accounts/forms.py:140 apps/accounts/forms.py:188
+#: apps/accounts/forms.py:158 apps/accounts/forms.py:206
 msgid "Passwords don't match"
 msgstr "Пароли не совпадают"
 
-#: apps/accounts/forms.py:164
+#: apps/accounts/forms.py:182
 msgid "Old password"
 msgstr "Старый пароль"
 
-#: apps/accounts/forms.py:167
+#: apps/accounts/forms.py:185
 msgid "New password"
 msgstr "Новый пароль"
 
-#: apps/accounts/forms.py:170
+#: apps/accounts/forms.py:188
 msgid "New password repeat"
 msgstr "Повторение нового пароля"
 
-#: apps/accounts/forms.py:182
+#: apps/accounts/forms.py:200
 msgid "Old password does not match"
 msgstr "Старый пароль не верен"
 
@@ -167,9 +177,7 @@ msgstr "Тип"
 msgid ""
 "Ban type, e.x. can not                     login beacuse of being banned as "
 "RUSSIAN"
-msgstr ""
-"Тип бана, например не могу зайти по причине того, что я из России"
-""
+msgstr "Тип бана, например не могу зайти по причине того, что я из России"
 
 #: apps/banlist/models.py:16
 msgid "reason"
@@ -224,6 +232,79 @@ msgstr "Пользовательский SID"
 msgid "UserSIDs"
 msgstr "Пользовательские SID-ы"
 
+#: apps/kickstarter/models.py:33
+#, fuzzy
+msgid "title"
+msgstr "Заголовок"
+
+#: apps/kickstarter/models.py:33
+msgid "milestone title"
+msgstr ""
+
+#: apps/kickstarter/models.py:37
+msgid "description"
+msgstr ""
+
+#: apps/kickstarter/models.py:37
+msgid "milestone description"
+msgstr ""
+
+#: apps/kickstarter/models.py:41
+msgid "threshold"
+msgstr ""
+
+#: apps/kickstarter/models.py:42
+msgid "success requested threshold"
+msgstr ""
+
+#: apps/kickstarter/models.py:45
+#, fuzzy
+msgid "content type"
+msgstr "Контент"
+
+#: apps/kickstarter/models.py:53
+msgid "field"
+msgstr ""
+
+#: apps/kickstarter/models.py:54
+msgid "condition field, for example is_published"
+msgstr ""
+
+#: apps/kickstarter/models.py:58
+#, fuzzy
+msgid "condition"
+msgstr "Конфигурация"
+
+#: apps/kickstarter/models.py:59
+msgid ""
+"condition, when threshold increases, for example         true, or gte=1, "
+"lte=1, gt=1, lt=1, ne=1 and so on in json        format"
+msgstr ""
+
+#: apps/kickstarter/models.py:65
+msgid "success?"
+msgstr ""
+
+#: apps/kickstarter/models.py:66
+msgid "milestone is successfull or not"
+msgstr ""
+
+#: apps/kickstarter/models.py:69
+msgid "percent to success"
+msgstr ""
+
+#: apps/kickstarter/models.py:70
+msgid "Percent to success or how successfully it goes"
+msgstr ""
+
+#: apps/kickstarter/models.py:97
+msgid "Milestone"
+msgstr ""
+
+#: apps/kickstarter/models.py:98
+msgid "Milestones"
+msgstr ""
+
 #: apps/news/admin.py:27 apps/news/models.py:12
 msgid "Title"
 msgstr "Заголовок"
@@ -232,7 +313,7 @@ msgstr "Заголовок"
 msgid "Content"
 msgstr "Контент"
 
-#: apps/news/models.py:30 apps/news/models.py:31 templates/base.html:88
+#: apps/news/models.py:30 apps/news/models.py:31 templates/base.html:103
 msgid "News"
 msgstr "Новости"
 
@@ -263,14 +344,18 @@ msgid ""
 msgstr ""
 "\n"
 "    \n"
-"    %(user)s Приветствует вас вместе со всей администрацией blacklibrary.ru.\n"
+"    %(user)s Приветствует вас вместе со всей администрацией blacklibrary."
+"ru.\n"
 "    Вас пригласили на b3ban.blacklibrary.ru.\n"
-"    Если вы не знаете что это за сайт/сервис, пожалуйста, проигнорируйте это письмо или\n"
+"    Если вы не знаете что это за сайт/сервис, пожалуйста, проигнорируйте это "
+"письмо или\n"
 "    подождите объяснений от ваших друзей, которые играют в battlefield 3.\n"
-"    Пожалуйста, перейдтите по данной ссылке %(link)s и следуйте инструкциям по ней\n"
+"    Пожалуйста, перейдтите по данной ссылке %(link)s и следуйте инструкциям "
+"по ней\n"
 "    для того, чтобы выполнить регистрацию.\n"
 "\n"
-"    Если вы получили это письмо случайно, пожалуйста проигнорируйте его, ничего страшного не случится ;)\n"
+"    Если вы получили это письмо случайно, пожалуйста проигнорируйте его, "
+"ничего страшного не случится ;)\n"
 "\n"
 "    C уважением, администрация b3ban.blacklibrary.ru\n"
 
@@ -287,59 +372,81 @@ msgid ""
 "    Your password restore link: %(link)s\n"
 msgstr ""
 "\n"
-"    Вы или кто-то другой запросили процедуру смены пароля для данного аккаунта emauk\n"
-"    Если это были не вы, пожалуйста проигнорируйте письмо и проинформируйте администрацию\n"
+"    Вы или кто-то другой запросили процедуру смены пароля для данного "
+"аккаунта emauk\n"
+"    Если это были не вы, пожалуйста проигнорируйте письмо и проинформируйте "
+"администрацию\n"
 "    Сервиса (http://b3ban.blacklibrary.ru/contacts/) \n"
-"    If you're not the person who initiated password request procedure, "
-"\n"
+"    If you're not the person who initiated password request procedure, \n"
 "    Ваша ссылка на восстановление пароля: %(link)s\n"
 
-#: templates/base.html:40
+#: templates/500.html:4
+msgid ""
+"Oops, something wrong happend, please stay alert it would be fixed soon. If "
+"the error appears once more, please give the administration a note about it."
+"<br>\n"
+"Thank your stay."
+msgstr ""
+
+#: templates/base.html:63
 msgid "View profile"
 msgstr "Просмотреть профиль"
 
-#: templates/base.html:41
+#: templates/base.html:64
 msgid "Invite friend"
 msgstr "Пригласить друга"
 
-#: templates/base.html:62 templates/index.html:14
+#: templates/base.html:67
+#, fuzzy
+msgid "Admin page"
+msgstr "Администрировать"
+
+#: templates/base.html:90 templates/index.html:14
 #: templates/accounts/login.html:6 templates/static/configuration.html:51
 msgid "Login"
 msgstr "Войти"
 
-#: templates/base.html:63 templates/index.html:13
+#: templates/base.html:91 templates/index.html:13
 #: templates/accounts/invite_register.html:6
 #: templates/accounts/register.html:6 templates/static/configuration.html:15
 #: templates/static/configuration.html:38
 msgid "Register"
 msgstr "Зарегистрироваться"
 
-#: templates/base.html:89 templates/static/about.html:3
+#: templates/base.html:99 templates/jtmpl/core.html:6
+msgid "Information"
+msgstr "Информация"
+
+#: templates/base.html:104 templates/static/about.html:3
 msgid "About"
 msgstr "О ресурсе"
 
-#: templates/base.html:90 templates/static/configuration.html:3
+#: templates/base.html:105 templates/static/configuration.html:3
 #: templates/static/faq.html:3 templates/static/faq.html.py:10
 #: templates/static/file_not_found.html:6
 msgid "FAQ"
 msgstr "ЧаВо"
 
-#: templates/base.html:91 templates/static/configuration.html:20
+#: templates/base.html:106 templates/static/configuration.html:20
 #: templates/static/configuration.html:49
 msgid "Configuration"
 msgstr "Конфигурация"
 
-#: templates/base.html:92 templates/static/contacts.html:3
+#: templates/base.html:107 templates/static/contacts.html:3
 msgid "Contacts"
 msgstr "Контакты"
 
-#: templates/base.html:93 templates/static/features.html:4
+#: templates/base.html:108 templates/static/features.html:4
 msgid "Features"
 msgstr "Возможности"
 
-#: templates/base.html:94
+#: templates/base.html:111
 msgid "Banlist"
 msgstr "Бан-лист"
+
+#: templates/base.html:144
+msgid "Produced by"
+msgstr ""
 
 #: templates/index.html:5
 msgid ""
@@ -371,7 +478,7 @@ msgstr "войдите"
 msgid "Invite successful proceeded"
 msgstr "Инвайт был выслан"
 
-#: templates/accounts/login.html:8
+#: templates/accounts/login.html:7
 msgid "Forgot password?"
 msgstr "Забыли пароль?"
 
@@ -427,7 +534,9 @@ msgstr "Отозвать и сгенерировать новый api-ключ?"
 
 #: templates/accounts/profile.html:21
 msgid "Your old key will be erased and stop work, use your new one instead"
-msgstr "Ваш старый ключ будет удален и перестанет работать, используйте ваш новый вместо него"
+msgstr ""
+"Ваш старый ключ будет удален и перестанет работать, используйте ваш новый "
+"вместо него"
 
 #: templates/accounts/profile.html:22
 msgid "Are you sure you want to complete this action?"
@@ -509,10 +618,6 @@ msgstr "Ошибка!"
 msgid "Form was not filled correctly. Changes are not saved."
 msgstr "Форма не была заполнена правильно. Изменения не сохранены."
 
-#: templates/jtmpl/core.html:6
-msgid "Information"
-msgstr "Информация"
-
 #: templates/jtmpl/core.html:12
 msgid "Information tag"
 msgstr "Информационная метка"
@@ -570,6 +675,28 @@ msgid ""
 "So that's it. I'm happy and shinning with possibility to ban servers I don't "
 "wanna play on.<br>\n"
 msgstr ""
+"\n"
+"I started this project to get rid off some servers I don't wanna play on."
+"<br>\n"
+"Why? We all know how simple to fall in rage playing battlefield 3, yet we "
+"know<br>\n"
+"how many reasons exist that may be enough to ban someone or something and "
+"forget about<br>\n"
+"it forever and ever :).<br><br>\n"
+"Decision had been made to make some sort of service that handles ban and "
+"some sort of extension<br>\n"
+"in browser that help to hide and block banned servers.<br>\n"
+"With great pleasure I'd want to use IT native within battle-log (shame on "
+"it). But DICE still<br>\n"
+"have no any certain idea when (I think that it would be nowhen and nohow) "
+"and how it implement.<br>\n"
+"I also though that premium players ask hard enough to make DICE do it, but I "
+"wasn wrong.<br><br>\n"
+"I thought about many people with the same problems and did something to "
+"solve within userspace.<br>\n"
+"<br>\n"
+"So that's it. I'm happy and shinning with possibility to ban servers I don't "
+"wanna play on.<br>\n"
 
 #: templates/static/configuration.html:10
 msgid "Configuration page"
@@ -598,6 +725,11 @@ msgid ""
 "stable and secure one\n"
 "            "
 msgstr ""
+"\n"
+"            <a href='https://chrome.google.com/'>Chrome browser</a>\n"
+"            verion not lower than <b>22.0.1229.14</b>, please use last "
+"stable and secure one\n"
+"            "
 
 #: templates/static/configuration.html:32
 msgid ""
@@ -606,6 +738,10 @@ msgid ""
 "blacklibrary.ru</a>\n"
 "            "
 msgstr ""
+"\n"
+"            Account on <a href='http://b3ban.blacklibrary.ru/'>b3ban."
+"blacklibrary.ru</a>\n"
+"            "
 
 #: templates/static/configuration.html:39
 msgid ""
@@ -616,6 +752,12 @@ msgid ""
 "see information below)\n"
 "        "
 msgstr ""
+"\n"
+"            You can not register free now, because server in test mode and "
+"it was reserved for few amount of people, who would use it.<br>\n"
+"            It should not be a big deal or problem to recieve invite (please "
+"see information below)\n"
+"        "
 
 #: templates/static/configuration.html:45
 msgid ""
@@ -624,57 +766,65 @@ msgid ""
 "<a href='http://stopgame.ru/blogs/topic/42512'>link</a>.\n"
 "        "
 msgstr ""
+"\n"
+"            You should follow instructions given by this (for russian users) "
+"<a href='http://stopgame.ru/blogs/topic/42512'>link</a>.\n"
+"        "
 
 #: templates/static/configuration.html:52
 msgid "with b3ban.blacklibrary.ru"
-msgstr ""
+msgstr "через b3ban.blacklibrary.ru"
 
 #: templates/static/configuration.html:55
 msgid "Read account information data via your"
-msgstr ""
+msgstr "Прочтите информацию об аккаунте через ваш"
 
 #: templates/static/configuration.html:56
 msgid "profile"
-msgstr ""
+msgstr "профиль"
 
 #: templates/static/configuration.html:57
 msgid "And copy api_key value into the clipboard"
-msgstr ""
+msgstr "И скопируйте api ключ в буфер обмена"
 
 #: templates/static/configuration.html:60
 msgid "Click on options link via extension popup (see the picture below)"
 msgstr ""
+"Кликните на ссылку настроек через всплывашку в расширении (смотри картинку "
+"ниже)"
 
 #: templates/static/configuration.html:63
 #: templates/static/configuration.html:64
 msgid "Popup options"
-msgstr ""
+msgstr "Опции всплывашки"
 
 #: templates/static/configuration.html:67
 msgid ""
 "Set proper options, set your username and api key by copy-pasting from your "
 "profile page"
 msgstr ""
+"Установите правильные настройки, установите имя пользователя и api ключ, "
+"скопировав их со страницы профиля"
 
 #: templates/static/configuration.html:68
 msgid "You should set b3ban.blacklibrary.ru as server"
-msgstr ""
+msgstr "Вы должны установить b3ban.blacklibrary.ru в качестве сервера"
 
 #: templates/static/configuration.html:71
 msgid "Your api key"
-msgstr ""
+msgstr "Ваш api ключ"
 
 #: templates/static/configuration.html:72
 msgid "Api key"
-msgstr ""
+msgstr "Api ключ"
 
 #: templates/static/configuration.html:76
 msgid "Options"
-msgstr ""
+msgstr "Настройки"
 
 #: templates/static/configuration.html:77
 msgid "Options window"
-msgstr ""
+msgstr "Окно настроек"
 
 #: templates/static/configuration.html:82
 msgid ""
@@ -684,28 +834,37 @@ msgid ""
 "<b>and wait for response</b>\n"
 "                "
 msgstr ""
+"\n"
+"                    <b>Click</b>\n"
+"                    <span class='btn btn-success btn-small'>Save</span> "
+"<b>and wait for response</b>\n"
+"                "
 
 #: templates/static/configuration.html:86
 msgid "That's all configuration before first use"
-msgstr ""
+msgstr "Это вся конфигурация перед первым использованием"
 
 #: templates/static/configuration.html:92
 msgid "Please read the section follow the link"
-msgstr ""
+msgstr "Пожалуйста прочитайте раздел, следуя по ссылке"
 
 #: templates/static/configuration.html:93
 msgid "How to use"
-msgstr ""
+msgstr "Как использовать"
 
 #: templates/static/contacts.html:4
 msgid ""
 "\n"
 "    You can contact with me via:\n"
 msgstr ""
+"\n"
+"Вы можете связаться со мной через: \n"
 
 #: templates/static/contacts.html:8
 msgid "My email: tarvitz [at] blacklibrary [dot] ru, please do not spam me :)"
 msgstr ""
+"Мое мыло: tarvitz [at] blacklibrary [dot] ru, пожалуйста не закидывайте меня "
+"спамом :)"
 
 #: templates/static/contacts.html:9
 msgid ""
@@ -714,62 +873,70 @@ msgid ""
 "[dot] ru, <br>\n"
 "        the second one is a little bit broken but I'll fix it soon"
 msgstr ""
+"\n"
+"    My jabber ID: tarvitz [at] jabber [dot] ru, tarvitz [at] blacklibrary "
+"[dot] ru, <br>\n"
+"        the second one is a little bit broken but I'll fix it soon"
 
 #: templates/static/does_not_exists.html:3
 msgid "Sorry, object you want to process does not exists"
-msgstr ""
+msgstr "Объект, который вы хотите потыкать не существует"
 
 #: templates/static/faq.html:12 templates/static/faq.html.py:24
 msgid "What is needed to make it work?"
-msgstr ""
+msgstr "Что необходимо для того чтобы все заработало?"
 
 #: templates/static/faq.html:13
 msgid "Can I register?"
-msgstr ""
+msgstr "Могу ли я зарегистрироваться?"
 
 #: templates/static/faq.html:14
 msgid "How can I recive invite?"
-msgstr ""
+msgstr "Как я могу получить инвайт?"
 
 #: templates/static/faq.html:15
 msgid "How it works?"
-msgstr ""
+msgstr "Как это работает?"
 
 #: templates/static/faq.html:16
 msgid "Can i offer the help with code, interface, design, another stuff?"
 msgstr ""
+"Могу ли я предоставить помощь в написании кода, интерфейсов, в дизайне, "
+"прочей херне?"
 
 #: templates/static/faq.html:17
 msgid "Can I donate?"
-msgstr ""
+msgstr "Могу ли я пожертвовать?"
 
 #: templates/static/faq.html:18 templates/static/faq.html.py:102
 msgid "If I donate where money would be spent to?"
-msgstr ""
+msgstr "Если я пожертвую бабла, куда они будут потрачены?"
 
 #: templates/static/faq.html:19 templates/static/faq.html.py:116
 msgid "I don't want to register b3ban.blacklibrary.ru, what I can do this way?"
 msgstr ""
+"Я не хочу регистрироваться на b3ban.blacklibrary.ru, что я могу сделать в "
+"этом случае?"
 
 #: templates/static/faq.html:22
 msgid "Answers"
-msgstr ""
+msgstr "Ответы"
 
 #: templates/static/faq.html:25
 msgid "Please, read follow "
-msgstr ""
+msgstr "Пожалуйста, прочтите"
 
 #: templates/static/faq.html:25
 msgid "link"
-msgstr ""
+msgstr "ссылку"
 
 #: templates/static/faq.html:25
 msgid "to succeed."
-msgstr ""
+msgstr " "
 
 #: templates/static/faq.html:28
 msgid "Can I register"
-msgstr ""
+msgstr "Могу ли я зарегаться"
 
 #: templates/static/faq.html:29
 msgid ""
@@ -780,22 +947,28 @@ msgid ""
 "href='#invite'>below</a>.\n"
 "        "
 msgstr ""
+"\n"
+"            I am sorry but you can not register for now, but you could "
+"recive invite and use this resource as normal user.<br>\n"
+"            Please read information how to get invitation <a "
+"href='#invite'>below</a>.\n"
+"        "
 
 #: templates/static/faq.html:35
 msgid "How can I recieve invite"
-msgstr ""
+msgstr "Как я могу получить инвайт"
 
 #: templates/static/faq.html:36
 msgid "Please visit following links"
-msgstr ""
+msgstr "Пожалуйста, посетите следующие ссылки"
 
 #: templates/static/faq.html:38
 msgid "read this"
-msgstr ""
+msgstr "прочтите это"
 
 #: templates/static/faq.html:42
 msgid "How it works"
-msgstr ""
+msgstr "Как это работает"
 
 #: templates/static/faq.html:43
 msgid ""
@@ -803,10 +976,13 @@ msgid ""
 "        Server holds every ban data you add within your account.\n"
 "        "
 msgstr ""
+"\n"
+" Сервер содержит все данные бана, которые вы добавляете через свой аккаунт.\n"
+" "
 
 #: templates/static/faq.html:46 templates/static/faq.html.py:47
 msgid "ban sample"
-msgstr ""
+msgstr "пример бана"
 
 #: templates/static/faq.html:49
 msgid ""
@@ -818,38 +994,45 @@ msgid ""
 "        It's pretty simple: (watch screenshots below)<br>\n"
 "        "
 msgstr ""
+"\n"
+"        When you get access on battle log servers browser extension will cut "
+"every single server that matches with your ip bans.<br>\n"
+"        So you should know how to get server ip address you want to ban."
+"<br>\n"
+"        It's pretty simple: (watch screenshots below)<br>\n"
+"        "
 
 #: templates/static/faq.html:55
 msgid "battle log server list"
-msgstr ""
+msgstr "сервера батл-лога"
 
 #: templates/static/faq.html:56
 msgid "servers"
-msgstr ""
+msgstr "сервера"
 
 #: templates/static/faq.html:58
 msgid "Chosen server"
-msgstr ""
+msgstr "Выбранный сервер"
 
 #: templates/static/faq.html:59
 msgid "Server"
-msgstr ""
+msgstr "Сервер"
 
 #: templates/static/faq.html:61 templates/static/faq.html.py:62
 msgid "Add ban step 1"
-msgstr ""
+msgstr "Добавление бана шаг 1"
 
 #: templates/static/faq.html:64 templates/static/faq.html.py:65
 msgid "Add ban step 2"
-msgstr ""
+msgstr "Добавление бана шаг 2"
 
 #: templates/static/faq.html:67 templates/static/faq.html.py:68
 msgid "Add ban step 3"
-msgstr ""
+msgstr "Добавление бана шаг 3"
 
 #: templates/static/faq.html:70
 msgid "Important to know"
-msgstr ""
+msgstr "Важно знать"
 
 #: templates/static/faq.html:71
 msgid ""
@@ -860,19 +1043,25 @@ msgid ""
 "you should reload extension ban list like you can see below:<br>\n"
 "        "
 msgstr ""
+"\n"
+"            Extension holds data with local storage, that gives fast speed "
+"communications and prevent storage server for overloading.<br>\n"
+"            So you should remember that every time you add ban for a server "
+"you should reload extension ban list like you can see below:<br>\n"
+"        "
 
 #: templates/static/faq.html:75 templates/static/faq.html.py:76
 #: templates/static/faq.html:79 templates/static/faq.html.py:82
 msgid "Search result step 1"
-msgstr ""
+msgstr "Результаты поиска шаг 1"
 
 #: templates/static/faq.html:78
 msgid "Search result step 2"
-msgstr ""
+msgstr "Результаты поиска шаг 2"
 
 #: templates/static/faq.html:81
 msgid "Search result step 3"
-msgstr ""
+msgstr "Результаты поиска шаг 3"
 
 #: templates/static/faq.html:87
 msgid ""
@@ -882,10 +1071,15 @@ msgid ""
 "something similar to.<br>\n"
 "        "
 msgstr ""
+"\n"
+"            Почему нет? Пишите письма на:<br>\n"
+"            tarvitz [at] blacklibrary dot ru с заголовками: могу помочь или "
+"как-то похоже на это.<br>\n"
+"        "
 
 #: templates/static/faq.html:92
 msgid "Can I donate? "
-msgstr ""
+msgstr "Могу чем-то помочь?"
 
 #: templates/static/faq.html:93
 msgid ""
@@ -896,15 +1090,15 @@ msgstr ""
 
 #: templates/static/faq.html:97
 msgid "bitcoin"
-msgstr ""
+msgstr "bitcoin"
 
 #: templates/static/faq.html:98
 msgid "litecoin"
-msgstr ""
+msgstr "litecoin"
 
 #: templates/static/faq.html:99
 msgid "YandexMoney"
-msgstr ""
+msgstr "ЯндексБабло"
 
 #: templates/static/faq.html:103
 msgid ""
@@ -931,6 +1125,28 @@ msgid ""
 "            </div>\n"
 "        "
 msgstr ""
+"\n"
+"            I think if it would be enough for first time this server would "
+"migrate for separate server platform to get more users, more people can use "
+"it for free :).<br>\n"
+"            The other plan is the improvement of present features, implement "
+"others. For example more user friendly ban operating within battlfield "
+"server browser or friends ban merging with yours (global bans and other "
+"stuff).<br>\n"
+"            You can offer or suggest feature or an idea to be implemented "
+"with or without donation. If it's great it would be in production some "
+"day :).<br>\n"
+"            So I mean the money would be a stimulation for further "
+"improvements.<br>\n"
+"            <div class='hide'>\n"
+"            Almost forgot if you want to support me, but you can not donate "
+"bitcoin, litecoin, yandex money you can offer help following people and "
+"organization (which products used to make this all possible):\n"
+"            <ul class='donations'>\n"
+"                <li><a href=''></a></li>\n"
+"            </ul>\n"
+"            </div>\n"
+"        "
 
 #: templates/static/faq.html:117
 msgid ""
@@ -947,38 +1163,50 @@ msgid ""
 "when I'll give information about this all.\n"
 "        "
 msgstr ""
+"\n"
+"        Хотя вам не обязательно регистрироваться на <a href='http://b3ban."
+"blacklibrary.ru'>b3ban.blacklibrary.ru</a> потому как здесь лишь "
+"сосредоточен механизм хранения банов и он достаточно прост.<br>\n"
+"        Если вы являетесь разработчиком, вы можете сделать свой собственый "
+"сервер или свое собственное приложение для хранения через HTTP 1.1 GET "
+"интерфейс, которое можно использовать наравне с пользователями<a "
+"href='http://b3ban.blacklibrary.ru'>b3ban.blacklibrary.ru</a><br>\n"
+"        В любом случае когда-нибудь я открою серверную часть и выложу ее на "
+"<a href='https://github.com'>github</a>.<br>\n"
+"        Можете помигать мне по этому вопросу в случае острой необходимости "
+"или дождитесь обновления ЧаВо        "
 
 #: templates/static/features.html:6
 msgid "Current version of bf3block has follow features"
-msgstr ""
+msgstr "Текущая версия bf3block имеет следующие возможности"
 
 #: templates/static/features.html:10
 msgid "Single/Multiple server blockage via IP"
-msgstr ""
+msgstr "Блокировка одного/нескольких серверов через IP адрес"
 
 #: templates/static/features.html:12
 msgid "GOT banned"
-msgstr ""
+msgstr "Забанен"
 
 #: templates/static/features.html:13
 msgid "got banned"
-msgstr ""
+msgstr "забанен"
 
 #: templates/static/features.html:17
 msgid "Server ip addresses show in much comfortable way"
-msgstr ""
+msgstr "IP адреса сервера отображаются в удобном виде"
 
 #: templates/static/features.html:19 templates/static/features.html.py:29
 msgid "IP addresses"
-msgstr ""
+msgstr "IP адреса"
 
 #: templates/static/features.html:20 templates/static/features.html.py:30
 msgid "ip addresses"
-msgstr ""
+msgstr "ip адреса"
 
 #: templates/static/features.html:23
 msgid "Different storage sources (HTTP1.1 GET feature required)"
-msgstr ""
+msgstr "Различные источники хранения (требуется HTTP 1.1 GET)"
 
 #: templates/static/features.html:24
 msgid ""
@@ -988,26 +1216,34 @@ msgid ""
 "            Or implement your own server-side storage server like this.\n"
 "        "
 msgstr ""
+"\n"
+"Вы можете свободно использовать приложение для локального хранения данных, "
+"котороеподдерживает пересылку данных через HTTP GET<br>\n"
+"Или написать свой сервер хранения для этого. "
 
 #: templates/static/file_not_found.html:3
 msgid "Sorry file you requested was not found"
-msgstr ""
+msgstr "Файл, запрошенный вами не был найден"
 
 #: templates/static/file_not_found.html:5
 msgid ""
 "It might happend because you requested deleted file, page does not exists or "
 "you have no permissions to download it"
 msgstr ""
+"Возможно что вы запросили удаленный файл или данной страницы не существует, "
+"или возможно у вас нет прав, для того, чтобы загрузить его"
 
 #: templates/static/file_not_found.html:6
 msgid "Please read the"
-msgstr ""
+msgstr "Пожалуйста, прочтите"
 
 #: templates/static/function_blocked.html:4
 msgid ""
 "Sorry, this part of the resource if strict permission or blocked for future "
 "days"
 msgstr ""
+"Данная часть ресурса расположена под ограниченным использованием или "
+"заблокированым до наступления неопределенного будущего ;)"
 
 #: templates/static/function_blocked.html:6
 msgid ""
@@ -1016,6 +1252,10 @@ msgid ""
 "something like this.<br>\n"
 "    If you have problems with login or register, be patient and read"
 msgstr ""
+"\n"
+"Без паники, когда-нибудь раздел/функциональность будет доступны для всехЕсли "
+"у вас есть проблемы с регистрацией или входом, наберитесь терпения и "
+"прочитайте"
 
 #: templates/static/function_blocked.html:11
 msgid "Thank you for your patience."

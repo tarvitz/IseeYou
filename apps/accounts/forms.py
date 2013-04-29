@@ -40,6 +40,15 @@ class LoginForm(forms.Form):
 
 
 class AccountRegisterForm(forms.ModelForm):
+    username = forms.RegexField(
+        label=_("Username"),
+        regex=re.compile(r'^[A-z][\w\d\._-]+\w+$'),
+        max_length=32,
+        min_length=3,
+        error_message=_('Try to pass only latin symbols, numbers and underscores with your nickname'),
+        help_text=_('Only latin symbols and numbers and underscore are allowed'),
+
+    )
     password2 = forms.CharField(
         required=True, label=_("Repeat password"),
         help_text=_("Repeat password"),
@@ -77,6 +86,15 @@ class AccountRegisterForm(forms.ModelForm):
 
 
 class InviteRegisterForm(AccountRegisterForm):
+    username = forms.RegexField(
+        label=_("Username"),
+        regex=re.compile(r'^[A-z][\w\d\._-]+\w+$'),
+        max_length=32,
+        min_length=3,
+        error_message=_('Try to pass only latin symbols, numbers and underscores with your nickname'),
+        help_text=_('Only latin symbols and numbers and underscore are allowed'),
+
+    )
     password = forms.CharField(
         label=_("Password"), required=True,
         widget=forms.PasswordInput())
