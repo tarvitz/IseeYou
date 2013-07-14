@@ -18,7 +18,7 @@
         </ul>
     </li>
     <li><a href='#configuration'>{% trans "Configuration" %}</a></li>
-    <li><a href='{% url core:faq %}#how_it_works'>{% trans "How to use?" %}</a></li>
+    <li><a href='{% url "core:faq" %}#how_it_works'>{% trans "How to use?" %}</a></li>
 </ul>
 
 <ul class='faq answers'>
@@ -48,12 +48,12 @@
     </li>
     <li><a name='configuration'>{% trans "Configuration" %}</a>
         <ul class='steps'>
-            <li><a href='{% url accounts:login %}' target="_blank">{% trans "Login" %}</a>
+            <li><a href='{% url "accounts:login" %}' target="_blank">{% trans "Login" %}</a>
                 {% trans "with b3ban.blacklibrary.ru" %}
             </li>
             <li>
                 {% trans "Read account information data via your" %}
-                <a href='{% url accounts:profile %}' target='_blank'>{% trans "profile" %}</a><br>
+                <a href='{% url "accounts:profile" %}' target='_blank'>{% trans "profile" %}</a><br>
                 {% trans "And copy api_key value into the clipboard" %}
             </li>
             <li>
@@ -90,7 +90,7 @@
     </li>
     <li><a name='how_it_works'>{% trans "How to use?" %}</a>
         {% trans "Please read the section follow the link" %}:
-        <a href='{% url core:faq %}#how_it_works'>{% trans "How to use" %}</a>
+        <a href='{% url "core:faq" %}#how_it_works'>{% trans "How to use" %}</a>
     </li>
 </ul>
 

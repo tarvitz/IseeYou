@@ -3,5 +3,5 @@
     <h3>{% trans "Sorry file you requested was not found" %}</h3>
     <br>
     {% trans "It might happend because you requested deleted file, page does not exists or you have no permissions to download it" %}<br>
-    {% trans "Please read the" %} <a href='{% url core:faq %}'>{% trans "FAQ" %}</a>.
+    {% trans "Please read the" %} <a href='{% url "core:faq" %}'>{% trans "FAQ" %}</a>.
 {% endblock %}

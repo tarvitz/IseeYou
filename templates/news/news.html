@@ -6,7 +6,7 @@
     {% for article in news %}
         <div class='article'>
             <div class='title'>
-                <a href='{% url news:article article.pk %}'>{{ article.title }}</a>
+                <a href='{% url "news:article" article.pk %}'>{{ article.title }}</a>
             </div>
             <div class='content'>{{ article.content|truncatewords_html:"40"|safe }}</div>
          </div>
