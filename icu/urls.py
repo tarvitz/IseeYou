@@ -19,6 +19,5 @@ urlpatterns = patterns('',
     url(r'^', include('apps.accounts.urls', namespace='accounts')),
     url(r'^news/', include('apps.news.urls', namespace='news')),
     url(r'^banlist/', include('apps.banlist.urls', namespace='banlist')),
-    url(r'', include('urls_api')),
-
+    url(r'', include('icu.urls_api')),
 )

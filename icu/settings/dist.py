@@ -1,7 +1,7 @@
 # Django settings for mong project.
 
 import os
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 
 def rel(path):
     return os.path.join(PROJECT_ROOT, path)
@@ -19,13 +19,15 @@ DATABASES = {
     'default': {
         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'db.sqlite',                      # Or path to database file if using sqlite3.
+        'NAME': rel('db.sqlite'),                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+ALLOWED_HOSTS = ['localhost', ]
+AUTH_USER_MODEL = 'accounts.User'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -127,10 +129,10 @@ MIDDLEWARE_CLASSES = (
 )
 
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'icu.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'wsgi.application'
+WSGI_APPLICATION = 'icu.wsgi.application'
 
 TEMPLATE_DIRS = (
     rel('templates'),
@@ -146,6 +148,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tastypie',
     'apps.core',
     'apps.accounts',
     'apps.banlist',
@@ -154,7 +157,6 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'grappelli',
     'django.contrib.admin',
-    'tastypie',
     'hvad',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',

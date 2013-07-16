@@ -2,10 +2,30 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractBaseUser, AbstractUser
+try:
+    from django.contrib.auth import get_user_model
+    User = get_user_model()
+except:
+    from django.contrib.auth.models import User
 
 from datetime import datetime, timedelta
 # your models here
+
+
+class User(AbstractUser):
+    #is_admin = models.BooleanField(
+    #    _("is admin"), default=False,
+    #)
+    #USERNAME_FIELD = 'username'
+    #REQUIRED_FIELDS = ['username', 'email']
+
+    def __unicode__(self):
+        return self.username
+
+    class Meta:
+        verbose_name = _("User")
+        verbose_name_plural = _("Users")
 
 
 class Invite(models.Model):
@@ -72,5 +92,6 @@ UserAdmin.list_display += ('invites', )
 
 
 # signals
-from apps.accounts.signals import setup_signals
-setup_signals()
+from apps.accounts.signals import *
+#import setup_signals
+#setup_signals()

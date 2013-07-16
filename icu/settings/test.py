@@ -1,7 +1,7 @@
 # coding: utf-8
-from settings.dist import *
-from settings.local import *
-from settings.dist import INSTALLED_APPS
+from icu.settings.dist import *
+from icu.settings.local import *
+from icu.settings.dist import INSTALLED_APPS
 
 DEBUG=True
 DEV_SERVER=True

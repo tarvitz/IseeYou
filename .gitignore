@@ -4,4 +4,4 @@
 /workgin
 /settings/local.py
 django.mo
-
+/run_tests.sh
