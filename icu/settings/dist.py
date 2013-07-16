@@ -149,9 +149,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #accounts should run first
-    'apps.accounts',
-    'tastypie',
     'apps.core',
+    'apps.accounts',
     'apps.banlist',
     'apps.news',
     'south',
@@ -159,6 +158,7 @@ INSTALLED_APPS = (
     'grappelli',
     'django.contrib.admin',
     'hvad',
+    'tastypie',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

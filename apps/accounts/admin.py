@@ -6,11 +6,7 @@ from django.contrib import admin
 from apps.accounts.models import Invite
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.admin import UserAdmin
-try:
-    from django.contrib.auth import get_user_model
-    User = get_user_model()
-except ImportError:
-    from django.contrib.auth.models import User
+from apps.accounts.models import User
 
 class InviteAdmin(admin.ModelAdmin):
     list_display = ('sender', 'email', 'is_verified', 'created_on')
