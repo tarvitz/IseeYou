@@ -26,8 +26,8 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+
 ALLOWED_HOSTS = ['localhost', ]
-AUTH_USER_MODEL = 'accounts.User'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -148,9 +148,10 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #accounts should run first
+    'apps.accounts',
     'tastypie',
     'apps.core',
-    'apps.accounts',
     'apps.banlist',
     'apps.news',
     'south',
@@ -190,6 +191,8 @@ LOGGING = {
         },
     }
 }
+
+AUTH_USER_MODEL = 'accounts.User'
 
 #CONFIGURE
 DEFAULT_TEMPLATE='base.html'

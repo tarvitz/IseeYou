@@ -4,18 +4,14 @@ from apps.core.managers import UserSIDManager
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse
-try:
-    from django.contrib.auth import get_user_model
-    User = get_user_model()
-except ImportError:
-    from django.contrib.auth.models import User
 
 from datetime import datetime, timedelta
+from django.conf import settings
 # your models here
 
 
 class UserSID(models.Model):
-    user = models.ForeignKey(User, related_name='user_sid_set')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='user_sid_set')
     sid = models.CharField(_("SID"), unique=True, max_length=512)
     # additional fields ?
     expired_date = models.DateTimeField(
