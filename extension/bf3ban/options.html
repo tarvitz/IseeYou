@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head><title>BF3Ban options</title>
+<meta charset="utf-8">
+<link rel='stylesheet' href='bootstrap/css/bootstrap.min.css' type='text/css'>
+<link rel='stylesheet' href='css/main.css' type='text/css'>
+</head>
+<body>
+<div class='container-fluid'>
+
+    <ul class='nav nav-tabs' id='tabnav'>
+        <li class='active'><a href='#options'>Account</a></li>
+        <!--<li><a href='#localbans'>Local Bans</a></li> -->
+    </ul>
+
+    <div class='tab-content' id='tabcontent'>
+        <div id='options' class='tab-pane active'>
+            <form class='options'>
+                <fieldset>
+                <!-- debug purposes -->
+                <!--<li>
+                    <label for='local_storage'>use local storage?</label>
+                    <input type='checkbox' id='local-storage' value="false" />
+                </li> -->
+                <li>
+                    <label for='server'>Server: </label>
+                    <input type='text' id='server' value='' class='span5' />
+                </li>
+                <li>
+                    <label for='username'>Username: </label>
+                    <input type='text' id='username' value='' class='span5' />
+                </li>
+                <li>
+                    <label for='api_key'>Api key:</label>
+                    <input type='text' id='api_key' value='' class='span5' />
+                </li><br>
+                <button id='save' class='btn btn-success'>Save</button>
+                </fieldset>
+            </form>
+        </div> <!-- options -->
+        <div id="localbans" class="tab-pane">
+            <form id="local-bans" action="" class="local bans">
+                
+            </form>
+        </div>
+    </div> <!-- tab content -->
+
+    <span id='state' class=''></span>
+</div>
+</body>
+
+<script src='js/jquery-1.8.2.min.js'></script>
+<script src='bootstrap/js/bootstrap.min.js'></script>
+<script src='options.js'></script>
+</html>

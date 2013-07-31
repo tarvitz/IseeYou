@@ -1,0 +1,22 @@
+body{
+    margin: 10px;
+}
+form li{
+    list-style-type: none;
+}
+.servers .options{
+    float: right;
+    margin-right: 4px;
+}
+.servers .options div{
+    display: inline;
+}
+#options-link, #reload-cache-link{
+    color: blue;
+    cursor: pointer;
+}
+div.link{
+    color: blue;
+    cursor: pointer;
+    display: inline;
+}

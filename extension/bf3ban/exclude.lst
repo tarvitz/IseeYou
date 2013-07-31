@@ -1,0 +1,11 @@
+bootstrap/js/*
+bootstrap/js/
+makedistribe.sh
+*.sw[po]
+exclude.lst
+makedistribute.sh
+.git/*
+.gitignore
+bootstrap/css/bootstrap-responsive.min.css
+bootstrap/css/bootstrap-responsive.css
+bootstrap/css/bootstrap.css
